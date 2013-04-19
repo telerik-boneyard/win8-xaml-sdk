@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="DynamicSeries_UsingCollectionOfCollections.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DynamicSeries_UsingCollectionOfCollections"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadCartesianChart Width="700" Height="700" PaletteName="DefaultDark" >
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.SeriesProvider >
+                <telerikChart:ChartSeriesProvider x:Name="provider" >
+                    <telerikChart:ChartSeriesProvider.SeriesDescriptors>
+                        <telerikChart:CategoricalSeriesDescriptor ValuePath="Value" CategoryPath="Category">
+                            <telerikChart:CategoricalSeriesDescriptor.Style>
+                                <Style TargetType="telerikChart:BarSeries">
+                                    <Setter Property="CombineMode" Value="Cluster"/>
+                                </Style>
+                            </telerikChart:CategoricalSeriesDescriptor.Style>
+                        </telerikChart:CategoricalSeriesDescriptor>
+                    </telerikChart:ChartSeriesProvider.SeriesDescriptors>
+                </telerikChart:ChartSeriesProvider>
+            </telerikChart:RadCartesianChart.SeriesProvider>
+        </telerikChart:RadCartesianChart>
+    </Grid>
+</Page>

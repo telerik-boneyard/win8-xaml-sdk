@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="SelectionBehavior_GettingStarted.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SelectionBehavior_GettingStarted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <telerikChart:RadCartesianChart       
+                                        SelectionPaletteName="DefaultDarkSelected"
+                                        PaletteName="DefaultDark">
+            <telerikChart:RadCartesianChart.DataContext>
+                <local:ViewModel/>
+            </telerikChart:RadCartesianChart.DataContext>
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.Behaviors>
+                <telerikChart:ChartSelectionBehavior DataPointSelectionMode="Single"
+                                                     SelectionChanged="DataPointSelectionChanged" />
+            </telerikChart:RadCartesianChart.Behaviors>
+            <telerikChart:BarSeries ItemsSource="{Binding SeriesData}"
+                                    PaletteMode="DataPoint">
+                <telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                </telerikChart:BarSeries.ValueBinding>
+                <telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                </telerikChart:BarSeries.CategoryBinding>
+            </telerikChart:BarSeries>
+        </telerikChart:RadCartesianChart>
+        
+        
+        <Border BorderThickness="1" BorderBrush="#FFC236" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" >
+            <StackPanel>
+                <TextBlock x:Name="textblock1" FontSize="20" TextWrapping="Wrap" Margin="10" Text="No Point selected" Width="300"/>
+                <TextBlock x:Name="textblock2" FontSize="20" TextWrapping="Wrap" Margin="10" Text="No Point selected" Width="300"/>
+                <TextBlock x:Name="textblock3" FontSize="20" TextWrapping="Wrap" Margin="10" Text="No Point selected" Width="300"/>
+            </StackPanel>
+        </Border>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="SeriesLabels_LabelStrategy.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SeriesLabels_LabelStrategy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:ViewModel />
+    </Page.DataContext>
+    
+
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.Resources>
+                <local:CenterInsideLabelStrategy x:Key="centerInsideStrategy" />
+                <local:CenterOutsideLabelStrategy x:Key="centerOutsideStrategy" />
+            </Grid.Resources>
+
+            <telerikChart:RadCartesianChart PaletteName="DefaultDark" x:Name="chart" Width="700" Height="700" >
+                <telerikChart:RadCartesianChart.HorizontalAxis>
+                    <telerikChart:CategoricalAxis />
+                </telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:RadCartesianChart.VerticalAxis>
+                    <telerikChart:LinearAxis />
+                </telerikChart:RadCartesianChart.VerticalAxis>
+
+                <telerikChart:BarSeries CombineMode="Stack" ItemsSource="{Binding Data}" ShowLabels="True" LegendTitle="first">
+                    <telerikChart:BarSeries.CategoryBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Category" />
+                    </telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:BarSeries.ValueBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Value" />
+                    </telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:BarSeries.LabelDefinitions>
+                        <!-- use custom label strategy to position the labels center&inside the bars -->
+                        <telerikChart:ChartSeriesLabelDefinition Strategy="{StaticResource centerInsideStrategy}" />
+                    </telerikChart:BarSeries.LabelDefinitions>
+                </telerikChart:BarSeries>
+                <telerikChart:BarSeries CombineMode="Stack" ItemsSource="{Binding Data}" ShowLabels="True" LegendTitle="second">
+                    <telerikChart:BarSeries.CategoryBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Category" />
+                    </telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:BarSeries.ValueBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Value2" />
+                    </telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:BarSeries.LabelDefinitions>
+                        <!-- use custom label strategy to position the labels center&inside the bars -->
+                        <telerikChart:ChartSeriesLabelDefinition Strategy="{StaticResource centerInsideStrategy}" />
+
+                        <!-- Add second label definition to the last stacked series ONLY - it will handle the stacked sums display center&outside the stacks  -->
+                        <telerikChart:ChartSeriesLabelDefinition Strategy="{StaticResource centerOutsideStrategy}">
+                            <telerikChart:ChartSeriesLabelDefinition.Binding>
+                                <telerikChart:PropertyNameDataPointBinding PropertyName="CalculatedStackedSum" />
+                            </telerikChart:ChartSeriesLabelDefinition.Binding>
+                        </telerikChart:ChartSeriesLabelDefinition>
+                    </telerikChart:BarSeries.LabelDefinitions>
+                </telerikChart:BarSeries>
+
+            </telerikChart:RadCartesianChart>
+        </Grid>
+</Page>

@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="TrackBallBehavior_GettingStarted.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TrackBallBehavior_GettingStarted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadCartesianChart Width="700" Height="700" ClipToBounds="False">
+            <telerikChart:RadCartesianChart.DataContext>
+                <local:ViewModel/>
+            </telerikChart:RadCartesianChart.DataContext>
+            <telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:CategoricalAxis/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+            <telerikChart:RadCartesianChart.Behaviors>
+                <telerikChart:ChartTrackBallBehavior/>
+            </telerikChart:RadCartesianChart.Behaviors>
+            <telerikChart:LineSeries ItemsSource="{Binding SeriesData}">          
+                <telerikChart:LineSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                </telerikChart:LineSeries.ValueBinding>
+                <telerikChart:LineSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                </telerikChart:LineSeries.CategoryBinding>
+            </telerikChart:LineSeries>
+        </telerikChart:RadCartesianChart>
+    </Grid>
+</Page>

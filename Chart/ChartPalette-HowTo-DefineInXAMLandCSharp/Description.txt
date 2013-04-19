@@ -1,0 +1,1 @@
+﻿This example shows how to define a custom ChartPalette both in XAML and C# and how to apply it to a RadChart.

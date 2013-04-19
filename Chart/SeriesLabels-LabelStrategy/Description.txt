@@ -1,0 +1,2 @@
+﻿This example shows how to use Label Strategy in order to specify the location of the labels depending on the current location of each data point.
+This approach is more advanced and it allows more detailed customizations.

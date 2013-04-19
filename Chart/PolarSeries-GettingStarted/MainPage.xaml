@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="PolarSeries_GettingStarted.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PolarSeries_GettingStarted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView  x:Name="listview" Grid.Column="0" Margin="100" SelectedIndex="0">
+
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+                            <telerikChart:RadPolarChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadPolarChart.DataContext>
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+                            <telerikChart:PolarAreaSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:PolarAreaSeries.AngleBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Angle"/>
+                                </telerikChart:PolarAreaSeries.AngleBinding>
+                                <telerikChart:PolarAreaSeries.ValueBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                                </telerikChart:PolarAreaSeries.ValueBinding>
+                            </telerikChart:PolarAreaSeries>
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="PolarArea Series" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+            
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+                            <telerikChart:RadPolarChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadPolarChart.DataContext>
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+                            <telerikChart:PolarSplineAreaSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:PolarSplineAreaSeries.AngleBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Angle"/>
+                                </telerikChart:PolarSplineAreaSeries.AngleBinding>
+                                <telerikChart:PolarSplineAreaSeries.ValueBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                                </telerikChart:PolarSplineAreaSeries.ValueBinding>
+                            </telerikChart:PolarSplineAreaSeries>
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="PolarSplineArea Series" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+                            <telerikChart:RadPolarChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadPolarChart.DataContext>
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+                            <telerikChart:PolarLineSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:PolarLineSeries.AngleBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Angle"/>
+                                </telerikChart:PolarLineSeries.AngleBinding>
+                                <telerikChart:PolarLineSeries.ValueBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                                </telerikChart:PolarLineSeries.ValueBinding>
+                            </telerikChart:PolarLineSeries>
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="PolarLine Series" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+                            <telerikChart:RadPolarChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadPolarChart.DataContext>
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+                            <telerikChart:PolarSplineSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:PolarSplineSeries.AngleBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Angle"/>
+                                </telerikChart:PolarSplineSeries.AngleBinding>
+                                <telerikChart:PolarSplineSeries.ValueBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                                </telerikChart:PolarSplineSeries.ValueBinding>
+                            </telerikChart:PolarSplineSeries>
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="PolarSpline Series" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+            
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+                            <telerikChart:RadPolarChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadPolarChart.DataContext>
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+                            <telerikChart:PolarPointSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:PolarPointSeries.AngleBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Angle"/>
+                                </telerikChart:PolarPointSeries.AngleBinding>
+                                <telerikChart:PolarPointSeries.ValueBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                                </telerikChart:PolarPointSeries.ValueBinding>
+                            </telerikChart:PolarPointSeries>
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="PolarPoint Series" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+
+
+        </ListView>
+
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" Grid.Column="1" Margin="100"/>
+    </Grid>
+</Page>

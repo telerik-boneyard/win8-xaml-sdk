@@ -1,0 +1,2 @@
+﻿This example shows how to customize labels in RadChart using ChartSeriesLabelDefinitions.
+In this scenario we have defined a property in our ViewModel from which we will extract information.

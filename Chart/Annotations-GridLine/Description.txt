@@ -1,0 +1,2 @@
+﻿This example demonstrates how RadChart supports grid line annotations. 
+Annotations are supported both for RadCartesianChart and RadPolarChart.

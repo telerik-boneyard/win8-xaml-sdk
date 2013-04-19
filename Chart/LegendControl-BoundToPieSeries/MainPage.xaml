@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="LegendControl_BoundToPieSeries.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LegendControl_BoundToPieSeries"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadPieChart x:Name="chart" PaletteName="DefaultDark" Width="700" Height="700">
+            <telerikChart:PieSeries ItemsSource="{Binding}" RadiusFactor="0.8">
+                <telerikChart:PieSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Amount"/>
+                </telerikChart:PieSeries.ValueBinding>
+                <telerikChart:PieSeries.LegendTitleBinding >
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                </telerikChart:PieSeries.LegendTitleBinding>
+            </telerikChart:PieSeries>
+        </telerikChart:RadPieChart>
+        <telerikPrimitives:RadLegendControl LegendProvider="{Binding ElementName=chart}"  Margin="600,150,0,50"  >
+            <telerikPrimitives:RadLegendControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </telerikPrimitives:RadLegendControl.ItemsPanel>
+            <telerikPrimitives:RadLegendControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Fill="{Binding Fill}" Stroke="{Binding Stroke}" StrokeThickness="1" Width="20" Height="20"/>
+                        <TextBlock Text="{Binding Title}" Foreground="{Binding Fill}"  Margin="10" FontStyle="Italic" FontSize="22"/> 
+                    </StackPanel>
+                </DataTemplate>
+            </telerikPrimitives:RadLegendControl.ItemTemplate>
+        </telerikPrimitives:RadLegendControl>
+
+    </Grid>
+</Page>

@@ -1,0 +1,1 @@
+﻿This example shows how to setup a RadCartesianChart. It includes the financial series(OhlcSeries and CandlestickSeries).

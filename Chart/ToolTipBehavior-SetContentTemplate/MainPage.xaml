@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="ToolTipBehavior_SetContentTemplate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToolTipBehavior_SetContentTemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadCartesianChart PaletteName="DefaultDark" x:Name="chart" Width="700" Height="700">
+            <telerikChart:RadCartesianChart.DataContext>
+                <local:ViewModel/>
+            </telerikChart:RadCartesianChart.DataContext>
+            <telerikChart:RadCartesianChart.Resources>
+                <local:CustomConverter x:Key="Converter"/>
+                <local:CustomConverterBrush x:Key="BrushConverter"/>
+            </telerikChart:RadCartesianChart.Resources>
+            <telerikChart:RadCartesianChart.Behaviors>
+                <telerikChart:ChartTooltipBehavior>
+                    <telerikChart:ChartTooltipBehavior.ContentTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#80D6F4" BorderThickness="1">
+                                <StackPanel Background="White">
+                                    <TextBlock Text="{Binding DataPoint.DataItem.SecondCountry, Converter={StaticResource Converter}, ConverterParameter=Country}" Foreground="#076FA0" />
+                                    <TextBlock Text="{Binding DataPoint.Value, Converter={StaticResource Converter}, ConverterParameter=Value}" Foreground="#99441D"/>
+                                    <TextBlock Text="{Binding DataPoint.Category, Converter={StaticResource Converter},ConverterParameter=Category}" Foreground="#506005"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </telerikChart:ChartTooltipBehavior.ContentTemplate>
+                </telerikChart:ChartTooltipBehavior>
+            </telerikChart:RadCartesianChart.Behaviors>
+            <telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LinearAxis/>
+            </telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:RadCartesianChart.HorizontalAxis>
+                    <telerikChart:CategoricalAxis/>
+            </telerikChart:RadCartesianChart.HorizontalAxis>
+
+            <telerikChart:BarSeries ItemsSource="{Binding Data}">
+                <telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                </telerikChart:BarSeries.CategoryBinding>
+                <telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                </telerikChart:BarSeries.ValueBinding>
+            </telerikChart:BarSeries>
+
+            <telerikChart:BarSeries ItemsSource="{Binding Data}">
+                <telerikChart:ChartTooltipBehavior.ContentTemplate>
+                    <DataTemplate>                       
+                          <Border BorderThickness="1" BorderBrush="{Binding Converter={StaticResource BrushConverter}}">
+                             <StackPanel>
+                                <TextBlock Text="{Binding DataPoint.DataItem.SecondCountry}" Foreground="{Binding Converter={StaticResource BrushConverter}}"/>                            
+                                <TextBlock Text="{Binding DataPoint.Value}" Foreground="{Binding Converter={StaticResource BrushConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                             </StackPanel>
+                          </Border>                       
+                    </DataTemplate>
+                </telerikChart:ChartTooltipBehavior.ContentTemplate>
+                <telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                </telerikChart:BarSeries.CategoryBinding>
+                <telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="SecondValue"/>
+                </telerikChart:BarSeries.ValueBinding>
+            </telerikChart:BarSeries>
+        </telerikChart:RadCartesianChart>
+    </Grid>
+</Page>

@@ -1,0 +1,2 @@
+﻿This example demonstrates how RadChart supports plot band annotations. 
+Annotations are supported both for RadCartesianChart and RadPolarChart.

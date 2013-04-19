@@ -1,0 +1,1 @@
+﻿This example shows how to enable panning and zooming in a RadChart using the ChartPanAndZoom behavior.

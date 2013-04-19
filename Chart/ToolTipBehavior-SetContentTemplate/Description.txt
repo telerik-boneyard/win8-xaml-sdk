@@ -1,0 +1,2 @@
+﻿This example shows how to add a Tooltip behavior in RadChart.
+Additionally, its ContentTemplate property is defined per chart basis and per series basis where converters are used to extract and modify information from the received context.

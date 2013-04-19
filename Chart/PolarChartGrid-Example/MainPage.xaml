@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="PolarChartGrid_Example.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PolarChartGrid_Example"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadPolarChart Width="700" Height="700">
+            <telerikChart:RadPolarChart.DataContext>
+                <local:ViewModel/>
+            </telerikChart:RadPolarChart.DataContext>
+            <telerikChart:RadPolarChart.Grid>
+                <telerikChart:PolarChartGrid GridLineVisibility="Radial" StripesVisibility="Polar"/>
+            </telerikChart:RadPolarChart.Grid>
+            <telerikChart:RadPolarChart.PolarAxis>
+                <telerikChart:PolarAxis/>
+            </telerikChart:RadPolarChart.PolarAxis>
+            <telerikChart:RadPolarChart.RadialAxis>
+                <telerikChart:NumericalRadialAxis/>
+            </telerikChart:RadPolarChart.RadialAxis>
+            <telerikChart:RadPolarChart.Series>
+                <telerikChart:PolarLineSeries ItemsSource="{Binding SeriesData}">
+                    <telerikChart:PolarLineSeries.ValueBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                    </telerikChart:PolarLineSeries.ValueBinding>
+                    <telerikChart:PolarLineSeries.AngleBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Angle"/>
+                    </telerikChart:PolarLineSeries.AngleBinding>
+                </telerikChart:PolarLineSeries>
+            </telerikChart:RadPolarChart.Series>
+        </telerikChart:RadPolarChart>
+    </Grid>
+</Page>

@@ -1,0 +1,1 @@
+﻿This example shows how to localize strings in RadChart by implementing the IStringResourceLoader interface.

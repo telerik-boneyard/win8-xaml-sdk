@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Axes_HowToUseMultipleAxes.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Axes_HowToUseMultipleAxes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <local:ViewModel/>
+        </Grid.DataContext>
+        <telerikChart:RadCartesianChart DataContext="{Binding GetData}"
+                                    PaletteName="DefaultDark"
+                                    Width="500" Height="500">
+
+            <telerikChart:BarSeries ItemsSource="{Binding}">
+                <telerikChart:BarSeries.HorizontalAxis>
+                    <telerikChart:DateTimeCategoricalAxis VerticalLocation="Bottom" 
+                                                      Foreground="#1E98E4"
+                                                      LabelFormat="{}{0,0:yyyy}"/>
+                </telerikChart:BarSeries.HorizontalAxis>
+                <telerikChart:BarSeries.VerticalAxis>
+                    <telerikChart:LinearAxis HorizontalLocation="Right" Foreground="#1E98E4"/>
+                </telerikChart:BarSeries.VerticalAxis>
+                <telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="BarCategory"/>
+                </telerikChart:BarSeries.CategoryBinding>
+                <telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="BarValue"/>
+                </telerikChart:BarSeries.ValueBinding>
+            </telerikChart:BarSeries>
+
+            <telerikChart:LineSeries ItemsSource="{Binding}">
+                <telerikChart:LineSeries.HorizontalAxis>
+                    <telerikChart:CategoricalAxis VerticalLocation="Top" Foreground="#FFC500"/>
+                </telerikChart:LineSeries.HorizontalAxis>
+                <telerikChart:LineSeries.VerticalAxis>
+                    <telerikChart:LinearAxis HorizontalLocation="Left" Foreground="#FFC500"/>
+                </telerikChart:LineSeries.VerticalAxis>
+                <telerikChart:LineSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="LineCategory"/>
+                </telerikChart:LineSeries.CategoryBinding>
+                <telerikChart:LineSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="LineValue"/>
+                </telerikChart:LineSeries.ValueBinding>
+                <telerikChart:LineSeries.PointTemplate>
+                    <DataTemplate>
+                        <Ellipse Width="20" Height="20"/>
+                    </DataTemplate>
+                </telerikChart:LineSeries.PointTemplate>
+            </telerikChart:LineSeries>
+        </telerikChart:RadCartesianChart>
+
+    </Grid>
+</Page>

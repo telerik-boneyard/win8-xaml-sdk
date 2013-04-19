@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+
+  <Identity Name="1fcd892f-3643-42f9-9133-7f86710e4941"
+            Publisher="CN=gergov"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>ChartPalette-HowTo-DefineInXAMLandCSharp</DisplayName>
+    <PublisherDisplayName>gergov</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="ChartPalette_HowTo_DefineInXAMLandCSharp.App">
+        <VisualElements
+            DisplayName="ChartPalette-HowTo-DefineInXAMLandCSharp"
+            Logo="Assets\Logo.png"
+            SmallLogo="Assets\SmallLogo.png"
+            Description="ChartPalette-HowTo-DefineInXAMLandCSharp"
+            ForegroundText="light"
+            BackgroundColor="#464646">
+            <DefaultTile ShowName="allLogos" />
+            <SplashScreen Image="Assets\SplashScreen.png" />
+        </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,1 @@
+﻿This example shows how to enable selection in RadChart using the ChartSelectionBehavior and also how to extract information from the selected point/s.

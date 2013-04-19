@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="Annotations_GridLine.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Annotations_GridLine"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:telerikCharting="using:Telerik.Charting"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="listview" Margin="100" SelectedIndex="0">
+            <ListViewItem>
+                <TextBlock Text="CartesianChart GridLine Annotations" FontSize="20" Margin="5,0,0,0"/>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadCartesianChart x:Name="cartesianChart">
+
+                            <telerikChart:RadCartesianChart.Annotations>
+                                <telerikChart:CartesianGridLineAnnotation Axis="{Binding ElementName=cartesianChart, Path=HorizontalAxis}" 
+                                        Value="2.8" Stroke="Blue" StrokeThickness="1"/>
+                                <telerikChart:CartesianGridLineAnnotation Axis="{Binding ElementName=cartesianChart, Path=VerticalAxis}" 
+                                        Value="6" Stroke="Red" StrokeThickness="1"/>
+                            </telerikChart:RadCartesianChart.Annotations>
+
+                            <telerikChart:RadCartesianChart.HorizontalAxis>
+                                <telerikChart:LinearAxis />
+                            </telerikChart:RadCartesianChart.HorizontalAxis>
+                            <telerikChart:RadCartesianChart.VerticalAxis>
+                                <telerikChart:LinearAxis/>
+                            </telerikChart:RadCartesianChart.VerticalAxis>
+
+                            <telerikChart:ScatterPointSeries>
+                                <telerikChart:ScatterPointSeries.DataPoints>
+                                    <telerikCharting:ScatterDataPoint XValue="1" YValue="1" />
+                                    <telerikCharting:ScatterDataPoint XValue="5" YValue="3" />
+                                    <telerikCharting:ScatterDataPoint XValue="8" YValue="11" />
+                                </telerikChart:ScatterPointSeries.DataPoints>
+                            </telerikChart:ScatterPointSeries>
+
+                            <telerikChart:RadCartesianChart.Grid>
+                                <telerikChart:CartesianChartGrid MajorLinesVisibility="XY" />
+                            </telerikChart:RadCartesianChart.Grid>
+
+                        </telerikChart:RadCartesianChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+            </ListViewItem>
+
+            <ListViewItem>
+                <TextBlock Text="PolarChart GridLine Annotations" FontSize="20" Margin="5,0,0,0"/>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+
+                            <telerikChart:RadPolarChart.Annotations>
+                                <telerikChart:PolarAxisGridLineAnnotation Value="2" Stroke="Red"/>
+                                <telerikChart:PolarAxisGridLineAnnotation Value="7" Stroke="LightGreen"/>
+                                <telerikChart:PolarAxisGridLineAnnotation Value="8" Stroke="LightBlue"/>
+                            </telerikChart:RadPolarChart.Annotations>
+
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+
+                            <telerikChart:PolarPointSeries>
+                                <telerikChart:PolarPointSeries.DataPoints>
+                                    <telerikCharting:PolarDataPoint Value="1" Angle="15" />
+                                    <telerikCharting:PolarDataPoint Value="5" Angle="200" />
+                                    <telerikCharting:PolarDataPoint Value="11" Angle="300" />
+                                </telerikChart:PolarPointSeries.DataPoints>
+                            </telerikChart:PolarPointSeries>
+
+                            <telerikChart:RadPolarChart.Grid>
+                                <telerikChart:PolarChartGrid GridLineVisibility="Both" />
+                            </telerikChart:RadPolarChart.Grid>
+
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+            </ListViewItem>
+        </ListView>
+
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" Grid.Column="1" Margin="100"/>
+    </Grid>
+</Page>

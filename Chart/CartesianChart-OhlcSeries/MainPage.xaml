@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="CartesianChart_OhlcSeries.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CartesianChart_OhlcSeries"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView  x:Name="listview" Grid.Column="0" Margin="100" SelectedIndex="0">
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadCartesianChart>
+                            <telerikChart:RadCartesianChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadCartesianChart.DataContext>
+                            <telerikChart:OhlcSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:OhlcSeries.HorizontalAxis>
+                                    <telerikChart:CategoricalAxis/>
+                                </telerikChart:OhlcSeries.HorizontalAxis>
+                                <telerikChart:OhlcSeries.VerticalAxis>
+                                    <telerikChart:LinearAxis/>
+                                </telerikChart:OhlcSeries.VerticalAxis>
+                                <telerikChart:OhlcSeries.HighBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="High"/>
+                                </telerikChart:OhlcSeries.HighBinding>
+                                <telerikChart:OhlcSeries.LowBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Low"/>
+                                </telerikChart:OhlcSeries.LowBinding>
+                                <telerikChart:OhlcSeries.OpenBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Open"/>
+                                </telerikChart:OhlcSeries.OpenBinding>
+                                <telerikChart:OhlcSeries.CloseBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Close"/>
+                                </telerikChart:OhlcSeries.CloseBinding>
+                            </telerikChart:OhlcSeries>
+                        </telerikChart:RadCartesianChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="OhlcSeries" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+
+            <ListViewItem>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadCartesianChart>
+                            <telerikChart:RadCartesianChart.DataContext>
+                                <local:ViewModel/>
+                            </telerikChart:RadCartesianChart.DataContext>
+                            <telerikChart:CandlestickSeries ItemsSource="{Binding GetData}">
+                                <telerikChart:CandlestickSeries.HorizontalAxis>
+                                    <telerikChart:CategoricalAxis/>
+                                </telerikChart:CandlestickSeries.HorizontalAxis>
+                                <telerikChart:CandlestickSeries.VerticalAxis>
+                                    <telerikChart:LinearAxis/>
+                                </telerikChart:CandlestickSeries.VerticalAxis>
+                                <telerikChart:CandlestickSeries.HighBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="High"/>
+                                </telerikChart:CandlestickSeries.HighBinding>
+                                <telerikChart:CandlestickSeries.LowBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Low"/>
+                                </telerikChart:CandlestickSeries.LowBinding>
+                                <telerikChart:CandlestickSeries.OpenBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Open"/>
+                                </telerikChart:CandlestickSeries.OpenBinding>
+                                <telerikChart:CandlestickSeries.CloseBinding>
+                                    <telerikChart:PropertyNameDataPointBinding PropertyName="Close"/>
+                                </telerikChart:CandlestickSeries.CloseBinding>
+                            </telerikChart:CandlestickSeries>
+
+                        </telerikChart:RadCartesianChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+                <TextBlock Text="CandleStickSeries" FontSize="20" Margin="5,0,0,0"/>
+            </ListViewItem>
+
+        </ListView>
+
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" Grid.Column="1" Margin="100"/>
+    </Grid>
+</Page>

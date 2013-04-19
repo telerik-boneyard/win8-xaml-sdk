@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="PointTemplateSelectorInBarSeries.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PointTemplateSelectorInBarSeries"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:CustomPointTemplateSelector x:Key="CustomPointTemplateSelector">
+            <local:CustomPointTemplateSelector.FirstTemplate>
+                <DataTemplate>
+                    <Border Background="Red"/>
+                </DataTemplate>
+            </local:CustomPointTemplateSelector.FirstTemplate>
+            <local:CustomPointTemplateSelector.SecondTemplate>
+                <DataTemplate>
+                    <Border Background="Green"/>
+                </DataTemplate>
+            </local:CustomPointTemplateSelector.SecondTemplate>
+        </local:CustomPointTemplateSelector>
+    </Page.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikChart:RadCartesianChart Width="700" Height="700"  >
+            <telerikChart:RadCartesianChart.DataContext>
+                <local:ViewModel/>
+            </telerikChart:RadCartesianChart.DataContext>
+            <telerikChart:BarSeries ItemsSource="{Binding SeriesData}"
+                                    PointTemplateSelector="{StaticResource CustomPointTemplateSelector}">
+                <telerikChart:BarSeries.HorizontalAxis>
+                    <telerikChart:CategoricalAxis/>
+                </telerikChart:BarSeries.HorizontalAxis>
+                <telerikChart:BarSeries.VerticalAxis>
+                    <telerikChart:LinearAxis/>
+                </telerikChart:BarSeries.VerticalAxis>
+                <telerikChart:BarSeries.CategoryBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                </telerikChart:BarSeries.CategoryBinding>
+                <telerikChart:BarSeries.ValueBinding>
+                    <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                </telerikChart:BarSeries.ValueBinding>
+            </telerikChart:BarSeries>
+        </telerikChart:RadCartesianChart>
+    </Grid>
+</Page>

@@ -1,0 +1,2 @@
+﻿This example shows how to allow the user to pass dynamic data to the chart and let the chart handle series generation, depending on some abstract definition/description of the desired series.
+In the current scenario the chart receives a collection of ViewModels as datacontext.

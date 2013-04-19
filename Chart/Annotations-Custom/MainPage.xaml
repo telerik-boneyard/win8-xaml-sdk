@@ -1,0 +1,132 @@
+﻿<Page
+    x:Class="Annotations_Custom.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Annotations_Custom"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:telerikCharting="using:Telerik.Charting"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="listview" Margin="100" SelectedIndex="0">
+            <ListViewItem>
+                <TextBlock Text="CartesianChart Custom Annotations" FontSize="20" Margin="5,0,0,0"/>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadCartesianChart x:Name="cartesianChart">
+
+                            <telerikChart:RadCartesianChart.Annotations>
+                                <telerikChart:CartesianCustomAnnotation HorizontalValue="2" VerticalValue="2" Content="Custom content" />
+                                <telerikChart:CartesianCustomAnnotation HorizontalValue="5" VerticalValue="7" 
+                                                HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <telerikChart:CartesianCustomAnnotation.ContentTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Text="Test location"/>
+                                                <Rectangle Width="100" Height="100" Fill="#99669966" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </telerikChart:CartesianCustomAnnotation.ContentTemplate>
+                                </telerikChart:CartesianCustomAnnotation>
+                            </telerikChart:RadCartesianChart.Annotations>
+
+                            <telerikChart:RadCartesianChart.HorizontalAxis>
+                                <telerikChart:LinearAxis />
+                            </telerikChart:RadCartesianChart.HorizontalAxis>
+                            <telerikChart:RadCartesianChart.VerticalAxis>
+                                <telerikChart:LinearAxis/>
+                            </telerikChart:RadCartesianChart.VerticalAxis>
+
+                            <telerikChart:ScatterPointSeries>
+                                <telerikChart:ScatterPointSeries.DataPoints>
+                                    <telerikCharting:ScatterDataPoint XValue="1" YValue="1" />
+                                    <telerikCharting:ScatterDataPoint XValue="5" YValue="3" />
+                                    <telerikCharting:ScatterDataPoint XValue="8" YValue="11" />
+                                </telerikChart:ScatterPointSeries.DataPoints>
+                            </telerikChart:ScatterPointSeries>
+
+                            <telerikChart:RadCartesianChart.Grid>
+                                <telerikChart:CartesianChartGrid MajorLinesVisibility="XY" />
+                            </telerikChart:RadCartesianChart.Grid>
+
+                        </telerikChart:RadCartesianChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+            </ListViewItem>
+
+            <ListViewItem>
+                <TextBlock Text="PolarChart Custom Annotations" FontSize="20" Margin="5,0,0,0"/>
+                <ListViewItem.DataContext>
+                    <DataTemplate>
+                        <telerikChart:RadPolarChart>
+
+                            <telerikChart:RadPolarChart.Annotations>
+                                <telerikChart:PolarCustomAnnotation PolarValue="3" RadialValue="70" Content="Custom content" />
+                                <telerikChart:PolarCustomAnnotation PolarValue="10" RadialValue="180"
+                                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <telerikChart:PolarCustomAnnotation.ContentTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Text="Test location"/>
+                                                <Rectangle Width="70" Height="70" Fill="#99669966" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </telerikChart:PolarCustomAnnotation.ContentTemplate>
+                                </telerikChart:PolarCustomAnnotation>
+                                <telerikChart:PolarCustomAnnotation PolarValue="8" RadialValue="300" 
+                                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <telerikChart:PolarCustomAnnotation.Content>
+                                        <Path Stroke="Red" StrokeThickness="2">
+                                            <Path.Data>
+                                                <PathGeometry>
+                                                    <PathGeometry.Figures>
+                                                        <PathFigure StartPoint="0,0">
+                                                            <LineSegment Point="20,30"/>
+                                                        </PathFigure>
+                                                        <PathFigure StartPoint="0,30">
+                                                            <LineSegment Point="20,0"/>
+                                                        </PathFigure>
+                                                    </PathGeometry.Figures>
+                                                </PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                    </telerikChart:PolarCustomAnnotation.Content>
+                                </telerikChart:PolarCustomAnnotation>
+                            </telerikChart:RadPolarChart.Annotations>
+
+                            <telerikChart:RadPolarChart.RadialAxis>
+                                <telerikChart:NumericalRadialAxis/>
+                            </telerikChart:RadPolarChart.RadialAxis>
+
+                            <telerikChart:RadPolarChart.PolarAxis>
+                                <telerikChart:PolarAxis/>
+                            </telerikChart:RadPolarChart.PolarAxis>
+
+                            <telerikChart:PolarPointSeries>
+                                <telerikChart:PolarPointSeries.DataPoints>
+                                    <telerikCharting:PolarDataPoint Value="1" Angle="15" />
+                                    <telerikCharting:PolarDataPoint Value="5" Angle="200" />
+                                    <telerikCharting:PolarDataPoint Value="11" Angle="300" />
+                                </telerikChart:PolarPointSeries.DataPoints>
+                            </telerikChart:PolarPointSeries>
+
+                            <telerikChart:RadPolarChart.Grid>
+                                <telerikChart:PolarChartGrid GridLineVisibility="Both" />
+                            </telerikChart:RadPolarChart.Grid>
+
+                        </telerikChart:RadPolarChart>
+                    </DataTemplate>
+                </ListViewItem.DataContext>
+            </ListViewItem>
+        </ListView>
+
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" Grid.Column="1" Margin="100"/>
+
+    </Grid>
+</Page>
