@@ -1,0 +1,1 @@
+﻿This example shows how to modify the template of each Cell in RadDataGrid depending on a condition through the DataTemplateSelector.

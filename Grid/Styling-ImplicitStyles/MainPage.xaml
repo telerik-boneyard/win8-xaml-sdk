@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Styling_ImplicitStyles.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Styling_ImplicitStyles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    xmlns:gridPrimitives="using:Telerik.UI.Xaml.Controls.Grid.Primitives"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid ItemsSource="{Binding GridSource}">
+            <telerikGrid:RadDataGrid.Resources>
+                <Style TargetType="gridPrimitives:DataGridHoverControl">
+                    <Setter Property="Background" Value="#8E6914"/>
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Style>
+  
+            <Style TargetType="gridPrimitives:SelectionRegionControl">
+                    <Setter Property="Background" Value="#808080"/>
+                    <Setter Property="BorderBrush" Value="#80D6F4"/>
+                <Setter Property="BorderThickness" Value="2"/>
+            </Style>
+            <Style TargetType="gridPrimitives:DataGridColumnDragControl">
+                    <Setter Property="Background" Value="#58622D"/>
+                    <Setter Property="Foreground" Value="#FFB60C"/>
+            </Style>
+            <Style TargetType="gridPrimitives:DataGridFlyoutGroupHeader">
+                    <Setter Property="Background" Value="#B45121"/>
+            </Style>
+            </telerikGrid:RadDataGrid.Resources>
+            
+            <telerikGrid:RadDataGrid.DataContext>
+                <local:ViewModel/>
+            </telerikGrid:RadDataGrid.DataContext>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

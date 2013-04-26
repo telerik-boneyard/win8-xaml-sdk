@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Columns_CellContentTemplateSelector.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Columns_CellContentTemplateSelector"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid x:Name="grid" UserGroupMode="Disabled" AutoGenerateColumns="False" VerticalAlignment="Center">
+            <telerikGrid:RadDataGrid.Resources>
+                <local:CustomDataTemplateSelector x:Key="CustomDataTemplateSelector">
+                    <local:CustomDataTemplateSelector.ImageTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Source="{Binding Flag}" Stretch="UniformToFill" Width="100" Height="100" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </local:CustomDataTemplateSelector.ImageTemplate>
+                    <local:CustomDataTemplateSelector.NoImageFoundTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="No Image Found" FontSize="16" FontStyle="Italic"
+                               Foreground="Red" HorizontalAlignment="Center" />
+                        </DataTemplate>
+                    </local:CustomDataTemplateSelector.NoImageFoundTemplate>
+                </local:CustomDataTemplateSelector>
+            </telerikGrid:RadDataGrid.Resources>
+
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTemplateColumn Header="Country">
+                    <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Country}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                </telerikGrid:DataGridTemplateColumn>
+
+                <telerikGrid:DataGridTemplateColumn Header="Flag" CellContentTemplateSelector="{StaticResource CustomDataTemplateSelector}">
+
+                </telerikGrid:DataGridTemplateColumn>
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

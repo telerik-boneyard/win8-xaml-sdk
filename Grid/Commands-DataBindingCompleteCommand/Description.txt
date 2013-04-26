@@ -1,0 +1,1 @@
+﻿This example shows how to create a custom implementation of the DataBindingComplete command. In this case, when called, a textblock will inform you what operation is executed.

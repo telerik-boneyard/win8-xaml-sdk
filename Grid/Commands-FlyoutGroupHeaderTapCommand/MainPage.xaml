@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Commands_FlyoutGroupHeaderTapCommand.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Commands_FlyoutGroupHeaderTapCommand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid x:Name="grid" Grid.Row="1">
+            <telerikGrid:RadDataGrid.GroupDescriptors>
+                <telerikGrid:PropertyGroupDescriptor PropertyName="City"/>
+                <telerikGrid:PropertyGroupDescriptor PropertyName="Country"/>
+            </telerikGrid:RadDataGrid.GroupDescriptors>
+        </telerikGrid:RadDataGrid>
+    </Grid>    
+</Page>

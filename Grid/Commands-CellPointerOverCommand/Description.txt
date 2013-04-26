@@ -1,0 +1,1 @@
+﻿This exampel shows how to create a custom implementation of the CellPointerOver command. In this case on pointer over, a RadChart will visualize with a LineSeries which represents the last 6 matches of the hovered Team.

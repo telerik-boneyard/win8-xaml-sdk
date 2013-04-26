@@ -1,0 +1,1 @@
+﻿This example shows how to group programatically using the PropertyGroupDescriptor.

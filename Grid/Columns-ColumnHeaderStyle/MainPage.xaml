@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Columns_ColumnHeaderStyle.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Columns_ColumnHeaderStyle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    xmlns:gridPrimitives="using:Telerik.UI.Xaml.Controls.Grid.Primitives"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid x:Name="grid" AutoGenerateColumns="False" VerticalAlignment="Center">
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTextColumn PropertyName="Country" Header="Country">
+                    <telerikGrid:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="gridPrimitives:DataGridColumnHeader">
+                            <Setter Property="Background" Value="#58622D"/>
+                        </Style>
+                    </telerikGrid:DataGridTextColumn.HeaderStyle>
+                </telerikGrid:DataGridTextColumn>
+
+                <telerikGrid:DataGridTextColumn PropertyName="Capital" Header="Capital">
+                    <telerikGrid:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="gridPrimitives:DataGridColumnHeader">
+                            <Setter Property="FontStyle" Value="Italic"/>
+                            <Setter Property="FontSize" Value="17"/>
+                        </Style>
+                    </telerikGrid:DataGridTextColumn.HeaderStyle>
+                </telerikGrid:DataGridTextColumn>
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

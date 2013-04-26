@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="Styling_GroupHeader.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Styling_GroupHeader"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    xmlns:gridPrimitives="using:Telerik.UI.Xaml.Controls.Grid.Primitives"
+    mc:Ignorable="d">
+    <Page.Resources>
+          
+        <local:CustomStyleSelector x:Key="StyleSelector">
+            <local:CustomStyleSelector.ExpandedStyle>
+                <Style TargetType="gridPrimitives:DataGridGroupHeader">
+                    <Setter Property="FontSize" Value="20"/>
+                </Style>
+            </local:CustomStyleSelector.ExpandedStyle>
+            <local:CustomStyleSelector.CollapsedStyle>
+                <Style TargetType="gridPrimitives:DataGridGroupHeader">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+            </local:CustomStyleSelector.CollapsedStyle>
+        </local:CustomStyleSelector>
+
+        <local:CustomDataTemplateSelector x:Key="TemplateSelector">
+            <local:CustomDataTemplateSelector.ExpandedTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Group.Key}" Foreground="#21A6FF" 
+                       FontStyle="Italic" 
+                       Margin="115,0,0,0" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </local:CustomDataTemplateSelector.ExpandedTemplate>
+            <local:CustomDataTemplateSelector.CollapsedTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Group.Key}" Foreground="#FFDE5B" 
+                       FontStyle="Italic" 
+                       Margin="115,0,0,0" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </local:CustomDataTemplateSelector.CollapsedTemplate>
+        </local:CustomDataTemplateSelector>
+
+    </Page.Resources>
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid x:Name="grid" ItemsSource="{Binding GridSource}" Width="500"
+                  GroupHeaderTemplateSelector="{StaticResource TemplateSelector}"
+                  GroupHeaderStyleSelector="{StaticResource StyleSelector}">
+            <telerikGrid:RadDataGrid.DataContext>
+                <local:ViewModel/>
+            </telerikGrid:RadDataGrid.DataContext>
+            <telerikGrid:RadDataGrid.GroupDescriptors>
+                <telerikGrid:PropertyGroupDescriptor PropertyName="Country"/>
+            </telerikGrid:RadDataGrid.GroupDescriptors>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

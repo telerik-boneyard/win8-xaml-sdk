@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Grouping_DelegateGroupDescriptor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Grouping_DelegateGroupDescriptor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView Margin="0,20,0,0">
+            <ListViewItem Tapped="Group_City_By_First_Letter" HorizontalAlignment="Center">
+                <TextBlock Text="Group City by first letter" 
+                           FontSize="20"
+                           Margin="10"/>
+            </ListViewItem>
+            <ListViewItem Tapped="Group_Country_By_First_Letter"  HorizontalAlignment="Center">
+                <TextBlock Text="Group Country by first letter" 
+                           FontSize="20"
+                           Margin="10"/>
+            </ListViewItem>
+            <ListViewItem Tapped="Clear_Grouping" HorizontalAlignment="Center">
+                <TextBlock Text="Clear Grouping" 
+                           FontSize="20"
+                           Margin="10"/>
+            </ListViewItem>
+        </ListView>
+        <telerikGrid:RadDataGrid UserGroupMode="Disabled" x:Name="grid" Grid.Row="1"/>
+    </Grid>
+</Page>

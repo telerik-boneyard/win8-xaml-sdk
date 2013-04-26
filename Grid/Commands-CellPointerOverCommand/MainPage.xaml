@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="Commands_CellPointerOverCommand.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Commands_CellPointerOverCommand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:CustomConverter x:Key="converter"/>
+        <local:VisibilityConverter x:Key="VisibilityConverter"/>
+    </Page.Resources>
+    
+    
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <telerikGrid:RadDataGrid x:Name="dataGrid"
+                                     PointerExited="DataGrid_PointerExited"
+                                     ItemsSource="{Binding GridSource}"
+                                     AutoGenerateColumns="False"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     UserGroupMode="Disabled">
+
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTextColumn Header="Team" PropertyName="Team"/>
+                <telerikGrid:DataGridTextColumn Header="Points" PropertyName="Points"/>
+            </telerikGrid:RadDataGrid.Columns> 
+        </telerikGrid:RadDataGrid>
+        <Grid Margin="50,0,50,0" Grid.Row="1" x:Name="grid" Visibility="{Binding SeriesSource,Converter={StaticResource VisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{Binding ChartHeader}"/>
+            <telerikChart:RadCartesianChart Grid.Row="1" ClipToBounds="False" Height="300"
+                                            DataContext="{Binding}">
+                <telerikChart:RadCartesianChart.HorizontalAxis>
+                    <telerikChart:CategoricalAxis Visibility="Collapsed"/>
+                </telerikChart:RadCartesianChart.HorizontalAxis>
+                <telerikChart:RadCartesianChart.VerticalAxis>
+                    <telerikChart:LinearAxis Visibility="Collapsed"/>
+                </telerikChart:RadCartesianChart.VerticalAxis>
+                <telerikChart:LineSeries ItemsSource="{Binding SeriesSource}" ShowLabels="True" ClipToPlotArea="False">
+                    <telerikChart:LineSeries.LabelDefinitions>
+                        <telerikChart:ChartSeriesLabelDefinition>
+                            <telerikChart:ChartSeriesLabelDefinition.Template>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DataItem.Result,Converter={StaticResource converter},ConverterParameter=result}"
+                                               FontSize="20" Margin="0,0,0,5"
+                                               Foreground="{Binding DataItem.Result,Converter={StaticResource converter},ConverterParameter=brush}"/>
+                                </DataTemplate>
+                            </telerikChart:ChartSeriesLabelDefinition.Template>
+                        </telerikChart:ChartSeriesLabelDefinition>
+                    </telerikChart:LineSeries.LabelDefinitions>
+                    <telerikChart:LineSeries.ValueBinding>
+                        <telerikChart:PropertyNameDataPointBinding PropertyName="Result"/>
+                    </telerikChart:LineSeries.ValueBinding>
+                </telerikChart:LineSeries>
+            </telerikChart:RadCartesianChart>
+        </Grid>
+  
+    </Grid>
+</Page>

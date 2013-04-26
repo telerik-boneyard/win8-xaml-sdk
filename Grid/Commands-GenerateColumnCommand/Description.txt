@@ -1,0 +1,1 @@
+﻿This example shows how to create a custom implementation of the GenerateColumn command. When called, we will check if there is a column that we do not want to show(in the example this is the ID column).

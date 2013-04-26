@@ -1,0 +1,2 @@
+﻿This example shows how to sort programatically depending on a custom logic using DelegateSortDescriptor.
+In the current scenario we are sorting by the number of characters of each item in the City column.

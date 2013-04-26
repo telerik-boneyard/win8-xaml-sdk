@@ -1,0 +1,2 @@
+﻿This example shows how to apply filtering using different property filter descriptors.
+Once filtering is applied thorugh selection in the combobox, make sure to clear the current filtering before applying another filter descriptor.

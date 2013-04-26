@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="Commands_CellDoubleTappedCommand.DetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Commands_CellDoubleTappedCommand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <local:LabelConverter x:Key="converter"/>
+        </Grid.Resources>
+        <Button Click="Button_Click_1" Content="GO BACK" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding Team}" FontSize="18" FontStyle="Italic" Margin="0,15,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <telerikGrid:RadDataGrid Grid.Row="1" ItemsSource="{Binding DetailsSource}" AutoGenerateColumns="False">
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTextColumn Header="Season" PropertyName="Season"/>
+                <telerikGrid:DataGridTextColumn Header="Place" PropertyName="Place"/>
+                <telerikGrid:DataGridTemplateColumn Header="WDL">
+                    <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <telerikChart:RadCartesianChart PaletteName="DefaultDark" Height="150">
+                                <telerikChart:RadCartesianChart.HorizontalAxis>
+                                    <telerikChart:CategoricalAxis Visibility="Collapsed"/>
+                                </telerikChart:RadCartesianChart.HorizontalAxis>
+                                <telerikChart:RadCartesianChart.VerticalAxis>
+                                    <telerikChart:LinearAxis Visibility="Collapsed"/>
+                                </telerikChart:RadCartesianChart.VerticalAxis>
+                                <telerikChart:BarSeries ItemsSource="{Binding WDL}" ShowLabels="True" PaletteMode="DataPoint">
+                                    <telerikChart:BarSeries.LabelDefinitions>
+                                        <telerikChart:ChartSeriesLabelDefinition HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <telerikChart:ChartSeriesLabelDefinition.Template>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Converter={StaticResource converter}}" Foreground="Black"/>
+                                                </DataTemplate>
+                                            </telerikChart:ChartSeriesLabelDefinition.Template>
+                                        </telerikChart:ChartSeriesLabelDefinition>
+                                    </telerikChart:BarSeries.LabelDefinitions>
+                                    <telerikChart:BarSeries.CategoryBinding>
+                                        <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+                                    </telerikChart:BarSeries.CategoryBinding>
+                                    <telerikChart:BarSeries.ValueBinding>
+                                        <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+                                    </telerikChart:BarSeries.ValueBinding>
+                                </telerikChart:BarSeries>
+                            </telerikChart:RadCartesianChart>
+                        </DataTemplate>
+                    </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                </telerikGrid:DataGridTemplateColumn>
+                <telerikGrid:DataGridTextColumn Header="Points" PropertyName="Points"/>
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

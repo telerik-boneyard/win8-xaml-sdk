@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Decorations_GettingStarted.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Decorations_GettingStarted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid ItemsSource="{Binding DataGrid}"
+                                 Width="700"
+                                 VerticalAlignment="Center"
+                                 RowBackground="#808080"
+                                 GridLinesVisibility="Both"
+                                 GridLinesBrush="#B45121"
+                                 GridLinesThickness="2"
+                                 AlternationStep="3"
+                                 AlternationStartIndex="1"
+                                 AlternateRowBackground="#58622D">
+            <telerikGrid:RadDataGrid.DataContext>
+                <local:ViewModel/>
+            </telerikGrid:RadDataGrid.DataContext>
+        </telerikGrid:RadDataGrid>
+
+    </Grid>
+</Page>

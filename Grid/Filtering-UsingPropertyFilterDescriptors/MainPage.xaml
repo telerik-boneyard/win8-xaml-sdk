@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="Filtering_UsingPropertyFilterDescriptors.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Filtering_UsingPropertyFilterDescriptors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="800"/>
+        </Grid.ColumnDefinitions>
+      
+        <ComboBox SelectionChanged="ComboBox_SelectionChanged_1"
+                  x:Name="combobox" Width="300" VerticalAlignment="Center" Margin="50,0,0,0">
+            
+            
+            <ComboBoxItem >
+                <TextBlock Text="TextFilterDescriptor" FontSize="20"/>
+                <ComboBoxItem.Tag>
+                    <telerikGrid:TextFilterDescriptor PropertyName="Team"
+                                                      Operator="StartsWith"
+                                                      Value="B"/>
+               </ComboBoxItem.Tag>
+            </ComboBoxItem>
+
+            <ComboBoxItem>
+                <TextBlock Text="BooleanFilterDescriptor" FontSize="20"/>
+                <ComboBoxItem.Tag>
+
+                    <telerikGrid:BooleanFilterDescriptor PropertyName="IsFromPremierLeague"
+                                                         Value="true"/>
+                </ComboBoxItem.Tag>
+            </ComboBoxItem>
+
+            <ComboBoxItem>
+                <TextBlock Text="NumericalFilterDescriptor" FontSize="20"/>
+                <ComboBoxItem.Tag> 
+                <telerikGrid:NumericalFilterDescriptor PropertyName="GroundCapacity"
+                                                       Operator="IsGreaterThan"
+                                                       Value="75000"/>
+                </ComboBoxItem.Tag>
+            </ComboBoxItem>
+
+            
+            <ComboBoxItem>
+                <TextBlock Text="DateTimeFilterDescriptor" FontSize="20"/>
+                <ComboBoxItem.Tag> 
+
+                <telerikGrid:DateTimeFilterDescriptor PropertyName="Founded"
+                                                  Operator="IsLessThan"
+                                                  Value="1890/01/01"/>
+                </ComboBoxItem.Tag>
+            </ComboBoxItem>
+
+
+            <ComboBoxItem>
+                <TextBlock Text="CompositeFilterDescriptor" FontSize="20"/>
+                <ComboBoxItem.Tag>
+
+                    <telerikGrid:CompositeFilterDescriptor Operator="And">
+                        <telerikGrid:NumericalFilterDescriptor PropertyName="GroundCapacity"
+                                                               Operator="IsGreaterThan"
+                                                               Value="80000"/>
+                        <telerikGrid:NumericalFilterDescriptor PropertyName="GroundCapacity"
+                                                               Operator="IsLessThan"
+                                                               Value="81000"/>
+                    </telerikGrid:CompositeFilterDescriptor>
+                </ComboBoxItem.Tag>
+            </ComboBoxItem>
+
+
+            <ComboBoxItem>
+                <TextBlock Text="Clear Filtering" FontSize="20"/>
+            </ComboBoxItem>
+
+        </ComboBox>
+
+
+        <telerikGrid:RadDataGrid x:Name="grid" Grid.Column="1" Height="500" Margin="100,0,0,0"
+                                 ItemsSource="{Binding GridSource}" >
+            <telerikGrid:RadDataGrid.DataContext>
+                <local:ViewModel/>
+            </telerikGrid:RadDataGrid.DataContext>            
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

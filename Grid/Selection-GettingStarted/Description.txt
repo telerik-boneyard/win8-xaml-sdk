@@ -1,0 +1,1 @@
+﻿This example shows how to extract information from a selected item. Currently, we are applying single selection mode where our selection unit is cell.

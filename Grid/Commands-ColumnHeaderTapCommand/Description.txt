@@ -1,0 +1,1 @@
+﻿This example shows how to create a custom implementation of the ColumnHeaderTap command. In this instead of the original sorting, a custom sorting will apply(On the first column header the sorting is based on the lenght of each Team name).

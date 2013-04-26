@@ -1,0 +1,1 @@
+﻿This example shows how to use Delegate Fitler Descriptor in order  to apply Filtering.
