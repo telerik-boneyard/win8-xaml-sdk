@@ -26,7 +26,6 @@ namespace Filtering_UsingDelegateFilterDescriptor
         public MainPage()
         {
             this.InitializeComponent();
-             
         }
 
         /// <summary>
@@ -48,8 +47,6 @@ namespace Filtering_UsingDelegateFilterDescriptor
             }
 
             this.dataGrid.FilterDescriptors.Add(new DelegateFilterDescriptor { Filter = updatedFilter });
-           
         }
-    
     }
 }

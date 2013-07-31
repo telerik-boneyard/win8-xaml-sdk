@@ -19,17 +19,11 @@ namespace Columns_AddTemplateColumn
 {
     public class Data
     {
-        public string Country
-        {
-            get;
-            set;
-        }
-        public BitmapImage Flag
-        {
-            get;
-            set;
-        }
+        public string Country { get; set; }
+
+        public BitmapImage Flag { get; set; }
     }
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -40,9 +34,9 @@ namespace Columns_AddTemplateColumn
             this.InitializeComponent();
 
             List<Data> list = new List<Data>();
-            list.Add(new Data { Country = "Argentina", Flag = new BitmapImage(new Uri("ms-appx:///Argentina.png", UriKind.Absolute)) });
-            list.Add(new Data { Country = "Brazil", Flag = new BitmapImage(new Uri("ms-appx:///Brazil.png", UriKind.Absolute)) });
-            list.Add(new Data { Country = "China", Flag = new BitmapImage(new Uri("ms-appx:///China.png", UriKind.Absolute)) });
+            list.Add(new Data { Country = "Argentina", Flag = new BitmapImage(new Uri("ms-appx:///Images/Argentina.png", UriKind.Absolute)) });
+            list.Add(new Data { Country = "Brazil", Flag = new BitmapImage(new Uri("ms-appx:///Images/Brazil.png", UriKind.Absolute)) });
+            list.Add(new Data { Country = "China", Flag = new BitmapImage(new Uri("ms-appx:///Images/China.png", UriKind.Absolute)) });
             this.grid.ItemsSource = list;
         }
 

@@ -10,7 +10,6 @@ namespace Commands_CellDoubleTappedCommand
 {
     public class LabelConverter : IValueConverter
     {
-
         object IValueConverter.Convert(object value, Type targetType, object parameter, string language)
         {
             return String.Format("{0}: {1}", (value as CategoricalDataPoint).Category, (value as CategoricalDataPoint).Value);

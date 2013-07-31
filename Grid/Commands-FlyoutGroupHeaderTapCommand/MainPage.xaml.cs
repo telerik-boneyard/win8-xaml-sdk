@@ -25,19 +25,16 @@ namespace Commands_FlyoutGroupHeaderTapCommand
         {
             this.InitializeComponent();
             List<DataClass> data = new List<DataClass>
-                                     {
-
-                                         new DataClass { Country = "Brazil", City = "Caxias do Sul"},
-                                         new DataClass { Country = "Ghana", City = "Wa"},
-                                         new DataClass { Country = "Brazil", City = "Fortaleza"},
-                                         new DataClass { Country = "Italy", City = "Florence" },
-                                         new DataClass { Country = "France", City = "Bordeaux" }, 
-                                         new DataClass { Country = "Bulgaria", City = "Vratsa"},
-                                         new DataClass { Country = "Spain", City = "Las Palmas"},
-                                         new DataClass { Country = "France", City = "Le Mans" },
-     
- 
-                                     };
+            {
+                new DataClass { Country = "Brazil", City = "Caxias do Sul" },
+                new DataClass { Country = "Ghana", City = "Wa" },
+                new DataClass { Country = "Brazil", City = "Fortaleza" },
+                new DataClass { Country = "Italy", City = "Florence" },
+                new DataClass { Country = "France", City = "Bordeaux" },
+                new DataClass { Country = "Bulgaria", City = "Vratsa" },
+                new DataClass { Country = "Spain", City = "Las Palmas" },
+                new DataClass { Country = "France", City = "Le Mans" },
+            };
             this.grid.ItemsSource = data;
             this.grid.Commands.Add(new CustomFlyoutGroupHeaderTap() { CurrentGrid = this.grid });
         }

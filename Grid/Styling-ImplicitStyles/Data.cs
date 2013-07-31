@@ -9,6 +9,7 @@ namespace Styling_ImplicitStyles
     public class Data
     {
         public string Team { get; set; }
+
         public string Country { get; set; }
     }
 }

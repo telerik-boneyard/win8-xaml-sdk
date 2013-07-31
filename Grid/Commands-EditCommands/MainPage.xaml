@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Commands_EditCommands.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Commands_EditCommands"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid
+            x:Name="grid"
+            ItemsSource="{Binding GridSource}"
+            UserEditMode="Inline"
+            Width="500"
+            Height="500">
+            <telerikGrid:RadDataGrid.Commands>
+                <local:GridCancelEditCommand/>
+                <local:GridCommitEditCommand/>
+                <local:GridBeginEditCommand/>
+            </telerikGrid:RadDataGrid.Commands>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

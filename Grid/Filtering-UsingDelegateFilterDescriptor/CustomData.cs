@@ -9,6 +9,7 @@ namespace Filtering_UsingDelegateFilterDescriptor
     public class CustomData
     {
         public string City { get; set; }
+
         public string Country { get; set; }
     }
 }

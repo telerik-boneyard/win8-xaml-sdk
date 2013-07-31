@@ -9,8 +9,11 @@ namespace Commands_CellDoubleTappedCommand
     public class Details
     {
         public string Season { get; set; }
+
         public string Place { get; set; }
+
         public List<WDL> WDL { get; set; }
-        public int Points { get; set; } 
+
+        public int Points { get; set; }
     }
 }

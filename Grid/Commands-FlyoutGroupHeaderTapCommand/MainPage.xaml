@@ -15,5 +15,5 @@
                 <telerikGrid:PropertyGroupDescriptor PropertyName="Country"/>
             </telerikGrid:RadDataGrid.GroupDescriptors>
         </telerikGrid:RadDataGrid>
-    </Grid>    
+    </Grid>
 </Page>

@@ -25,8 +25,6 @@ namespace Commands_ColumnHeaderTapCommand
             {
                 return null;
             }
-
-
         }
     }
 }

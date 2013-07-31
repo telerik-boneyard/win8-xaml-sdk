@@ -17,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 namespace Styling_ImplicitStyles
 {
     public class MyClass
-	{
-		public int MyProperty { get; set; }
-	}  
+    {
+        public int MyProperty { get; set; }
+    }
  
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -29,7 +29,6 @@ namespace Styling_ImplicitStyles
         public MainPage()
         {
             this.InitializeComponent();
-                 
         }
 
         /// <summary>

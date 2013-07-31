@@ -26,6 +26,7 @@ namespace Commands_CellPointerOverCommand
     public sealed partial class MainPage : Page
     {
         ViewModel viewmodel = new ViewModel();
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -33,8 +34,6 @@ namespace Commands_CellPointerOverCommand
             this.DataContext = viewmodel;
             DataGridUserCommand command = new DataGridUserCommand() { Id = CommandId.CellPointerOver, Command = new CustomCommand(this.DataContext as ViewModel) };                                                                 
             dataGrid.Commands.Add(command);
-          
-             
         }
 
         /// <summary>
@@ -46,11 +45,9 @@ namespace Commands_CellPointerOverCommand
         {
         }
 
-
         private void DataGrid_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             viewmodel.SeriesSource = null;
         }
-        
     }
 }

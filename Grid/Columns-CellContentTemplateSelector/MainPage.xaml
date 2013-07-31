@@ -15,14 +15,19 @@
                     <local:CustomDataTemplateSelector.ImageTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <Image Source="{Binding Flag}" Stretch="UniformToFill" Width="100" Height="100" />
+                                <Image Source="{Binding Flag}" Height="50" Stretch="None" Margin="5"/>
                             </StackPanel>
                         </DataTemplate>
                     </local:CustomDataTemplateSelector.ImageTemplate>
                     <local:CustomDataTemplateSelector.NoImageFoundTemplate>
                         <DataTemplate>
-                            <TextBlock Text="No Image Found" FontSize="16" FontStyle="Italic"
-                               Foreground="Red" HorizontalAlignment="Center" />
+                            <TextBlock Text="No Image Found"
+                                       FontSize="16" 
+                                       FontStyle="Italic"
+                                       Foreground="Red" 
+                                       HorizontalAlignment="Center"
+                                       Margin="5"
+                                       />
                         </DataTemplate>
                     </local:CustomDataTemplateSelector.NoImageFoundTemplate>
                 </local:CustomDataTemplateSelector>

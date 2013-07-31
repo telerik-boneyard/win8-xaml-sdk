@@ -53,7 +53,5 @@ namespace Sorting_UsingDelegateSortDescriptor
         {
             this.dataGrid.SortDescriptors.Clear();
         }
-
-        
     }
 }

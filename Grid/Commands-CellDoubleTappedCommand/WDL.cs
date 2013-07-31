@@ -9,6 +9,7 @@ namespace Commands_CellDoubleTappedCommand
     public class WDL
     {
         public string Category { get; set; }
+
         public int Value { get; set; }
     }
 }

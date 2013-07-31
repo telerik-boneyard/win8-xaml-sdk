@@ -12,25 +12,24 @@
         <local:CustomConverter x:Key="converter"/>
         <local:VisibilityConverter x:Key="VisibilityConverter"/>
     </Page.Resources>
-    
-    
-        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-            <telerikGrid:RadDataGrid x:Name="dataGrid"
-                                     PointerExited="DataGrid_PointerExited"
-                                     ItemsSource="{Binding GridSource}"
-                                     AutoGenerateColumns="False"
-                                     HorizontalAlignment="Center"
-                                     VerticalAlignment="Center"
-                                     UserGroupMode="Disabled">
+        <telerikGrid:RadDataGrid x:Name="dataGrid"
+                                 PointerExited="DataGrid_PointerExited"
+                                 ItemsSource="{Binding GridSource}"
+                                 AutoGenerateColumns="False"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 UserGroupMode="Disabled">
 
             <telerikGrid:RadDataGrid.Columns>
                 <telerikGrid:DataGridTextColumn Header="Team" PropertyName="Team"/>
                 <telerikGrid:DataGridTextColumn Header="Points" PropertyName="Points"/>
-            </telerikGrid:RadDataGrid.Columns> 
+            </telerikGrid:RadDataGrid.Columns>
         </telerikGrid:RadDataGrid>
         <Grid Margin="50,0,50,0" Grid.Row="1" x:Name="grid" Visibility="{Binding SeriesSource,Converter={StaticResource VisibilityConverter}}">
             <Grid.RowDefinitions>
@@ -38,8 +37,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Text="{Binding ChartHeader}"/>
-            <telerikChart:RadCartesianChart Grid.Row="1" ClipToBounds="False" Height="300"
-                                            DataContext="{Binding}">
+            <telerikChart:RadCartesianChart Grid.Row="1" ClipToBounds="False" Height="300" DataContext="{Binding}">
                 <telerikChart:RadCartesianChart.HorizontalAxis>
                     <telerikChart:CategoricalAxis Visibility="Collapsed"/>
                 </telerikChart:RadCartesianChart.HorizontalAxis>
@@ -64,6 +62,5 @@
                 </telerikChart:LineSeries>
             </telerikChart:RadCartesianChart>
         </Grid>
-  
     </Grid>
 </Page>

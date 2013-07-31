@@ -10,16 +10,10 @@ namespace Columns_CellContentTemplateSelector
 {
     public class CustomDataTemplateSelector : DataTemplateSelector
     {
-        public DataTemplate ImageTemplate
-        {
-            get;
-            set;
-        }
-        public DataTemplate NoImageFoundTemplate
-        {
-            get;
-            set;
-        }
+        public DataTemplate ImageTemplate { get; set; }
+
+        public DataTemplate NoImageFoundTemplate { get; set; }
+
         protected override Windows.UI.Xaml.DataTemplate SelectTemplateCore(object item, Windows.UI.Xaml.DependencyObject container)
         {
             if ((item as CustomObject).Flag == null)

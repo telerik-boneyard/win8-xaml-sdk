@@ -12,17 +12,17 @@
         <telerikGrid:RadDataGrid ItemsSource="{Binding DataGrid}"
                                  Width="700"
                                  VerticalAlignment="Center"
-                                 RowBackground="#808080"
+                                 RowBackground="#1885C9"
                                  GridLinesVisibility="Both"
-                                 GridLinesBrush="#B45121"
+                                 GridLinesBrush="#1E5C69"
                                  GridLinesThickness="2"
                                  AlternationStep="3"
                                  AlternationStartIndex="1"
-                                 AlternateRowBackground="#58622D">
+                                 AlternateRowBackground="#35B8A8">
             <telerikGrid:RadDataGrid.DataContext>
                 <local:ViewModel/>
             </telerikGrid:RadDataGrid.DataContext>
         </telerikGrid:RadDataGrid>
-
+    
     </Grid>
 </Page>

@@ -25,13 +25,13 @@ namespace Columns_CellContentStyleSelector
         {
             this.InitializeComponent();
             this.grid.ItemsSource = new List<CustomData>
-                                     {         
-                                         new CustomData { Subject = "Chemistry", Mark = 2},
-                                         new CustomData { Subject = "Biology", Mark = 2},
-                                         new CustomData { Subject = "Maths", Mark = 6},
-                                         new CustomData { Subject = "Music", Mark = 2},
-                                         new CustomData { Subject = "History", Mark = 6 },                                                                                   
-                                    };
+            {
+                new CustomData { Subject = "Chemistry", Mark = 2 },
+                new CustomData { Subject = "Biology", Mark = 2 },
+                new CustomData { Subject = "Maths", Mark = 6 },
+                new CustomData { Subject = "Music", Mark = 2 },
+                new CustomData { Subject = "History", Mark = 6 },
+            };
         }
 
         /// <summary>

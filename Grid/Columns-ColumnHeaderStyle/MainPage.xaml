@@ -15,7 +15,7 @@
                 <telerikGrid:DataGridTextColumn PropertyName="Country" Header="Country">
                     <telerikGrid:DataGridTextColumn.HeaderStyle>
                         <Style TargetType="gridPrimitives:DataGridColumnHeader">
-                            <Setter Property="Background" Value="#58622D"/>
+                            <Setter Property="Background" Value="Green"/>
                         </Style>
                     </telerikGrid:DataGridTextColumn.HeaderStyle>
                 </telerikGrid:DataGridTextColumn>

@@ -1,1 +1,1 @@
-﻿This example shows how to create template columns in RadDataGrid.
+﻿This example shows how to create a template column with images in RadDataGrid.

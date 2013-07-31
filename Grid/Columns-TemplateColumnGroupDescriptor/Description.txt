@@ -1,0 +1,1 @@
+﻿This example demonstrates how to add a custom DelegateGroupDescriptor to DataGridTemplateColumn.

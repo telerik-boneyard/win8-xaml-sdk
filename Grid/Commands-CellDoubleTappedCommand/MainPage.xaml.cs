@@ -22,6 +22,7 @@ namespace Commands_CellDoubleTappedCommand
     public sealed partial class MainPage : Page
     {
         ViewModel viewmodel = new ViewModel();
+
         public MainPage()
         {
             this.InitializeComponent();          

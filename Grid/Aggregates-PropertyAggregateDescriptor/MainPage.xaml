@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Aggregates_PropertyAggregateDescriptor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aggregates_PropertyAggregateDescriptor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <local:Converter x:Key="converter"/>
+    </Page.Resources>
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid
+            Width="500" Height="500"
+            x:Name="grid"
+            ItemsSource="{Binding GridSource}" >
+            <telerikGrid:RadDataGrid.GroupHeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Converter={StaticResource converter}}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </telerikGrid:RadDataGrid.GroupHeaderTemplate>
+            <telerikGrid:RadDataGrid.GroupDescriptors>
+                <telerikGrid:PropertyGroupDescriptor PropertyName="Team"/>
+            </telerikGrid:RadDataGrid.GroupDescriptors>
+            <telerikGrid:RadDataGrid.AggregateDescriptors>
+                <telerikGrid:PropertyAggregateDescriptor PropertyName="Points" Function="Sum"/>
+            </telerikGrid:RadDataGrid.AggregateDescriptors>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

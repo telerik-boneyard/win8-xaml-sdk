@@ -1,1 +1,1 @@
-﻿This example shows how to create a custom implementation of the CellDoubleTapped command. In this case after a double tap a new Page with DataGrid which contains details for the selected Team will open.
+﻿This example shows how to create a custom implementation of the CellDoubleTapped command. In this case after a double tap a new Page with DataGrid that contains details for the selected Team will open.

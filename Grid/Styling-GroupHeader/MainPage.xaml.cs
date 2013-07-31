@@ -26,10 +26,6 @@ namespace Styling_GroupHeader
             this.InitializeComponent();           
         }
 
-     
-            
-       
-
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
@@ -38,7 +34,5 @@ namespace Styling_GroupHeader
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
-
-
     }
 }

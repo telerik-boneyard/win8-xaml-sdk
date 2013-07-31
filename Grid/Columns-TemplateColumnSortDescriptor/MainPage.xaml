@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Columns_TemplateColumnSortDescriptor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Columns_TemplateColumnSortDescriptor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <local:AgeToStringConverter x:Key="AgeConverter"/>
+        <local:ItemToNameConverter x:Key="NameConverter"/>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikGrid:RadDataGrid ItemsSource="{Binding Collection}" AutoGenerateColumns="False" UserGroupMode="Disabled"  Width="400" Height="400">
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTemplateColumn Header="Name">
+                    <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource NameConverter}}" Margin="20"/>
+                        </DataTemplate>
+                    </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                    <telerikGrid:DataGridTemplateColumn.SortDescriptor>
+                        <telerikGrid:DelegateSortDescriptor>
+                            <telerikGrid:DelegateSortDescriptor.KeyLookup>
+                                <local:NameCustomKeyLoookup/>
+                            </telerikGrid:DelegateSortDescriptor.KeyLookup>
+                        </telerikGrid:DelegateSortDescriptor>
+                    </telerikGrid:DataGridTemplateColumn.SortDescriptor>
+                </telerikGrid:DataGridTemplateColumn>
+
+                <telerikGrid:DataGridTemplateColumn Header="Age">
+                    <telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Age, Converter={StaticResource AgeConverter}}" Margin="20"/>
+                        </DataTemplate>
+                    </telerikGrid:DataGridTemplateColumn.CellContentTemplate>
+                    <telerikGrid:DataGridTemplateColumn.SortDescriptor>
+                        <telerikGrid:PropertySortDescriptor PropertyName="Age"/>
+                    </telerikGrid:DataGridTemplateColumn.SortDescriptor>
+                </telerikGrid:DataGridTemplateColumn>
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>
+    </Grid>
+</Page>

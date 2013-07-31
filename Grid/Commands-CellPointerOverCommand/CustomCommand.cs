@@ -11,10 +11,10 @@ using Windows.UI.Xaml.Controls;
 
 namespace Commands_CellPointerOverCommand
 {
-
     public class CustomCommand : ICommand
     {
         public ViewModel CurrentViewModel { get; set; }
+
         public CustomCommand(ViewModel currentViewModel)
         {
             this.CurrentViewModel = currentViewModel;
@@ -32,7 +32,6 @@ namespace Commands_CellPointerOverCommand
             var currentItem = (parameter as DataGridCellInfo).Item as Data;
             this.CurrentViewModel.SeriesSource = currentItem.LastMatches;
             this.CurrentViewModel.ChartHeader = String.Format("Last 6 matches of {0}", currentItem.Team);
-            
         }
     }
 }

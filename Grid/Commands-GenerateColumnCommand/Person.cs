@@ -9,8 +9,11 @@ namespace Commands_GenerateColumnCommand
     public class Person
     {
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
+
         public double ID { get; set; }
+
         public string Country
         {
             get

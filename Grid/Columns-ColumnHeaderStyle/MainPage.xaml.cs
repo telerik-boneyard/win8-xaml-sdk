@@ -25,13 +25,13 @@ namespace Columns_ColumnHeaderStyle
         {
             this.InitializeComponent();
             this.grid.ItemsSource = new List<Data>
-                                     {         
-                                         new Data { Country = "Columbia", Capital = "Bogota"},
-                                         new Data { Country = "Germany", Capital = "Berlin"},
-                                         new Data { Country = "Italy", Capital = "Rome"},
-                                         new Data { Country = "France", Capital = "Paris" },
-                                         new Data { Country = "Bulgaria", Capital = "Sofia" },                                                                                   
-                                     };
+            {
+                new Data { Country = "Columbia", Capital = "Bogota" },
+                new Data { Country = "Germany", Capital = "Berlin" },
+                new Data { Country = "Italy", Capital = "Rome" },
+                new Data { Country = "France", Capital = "Paris" },
+                new Data { Country = "Bulgaria", Capital = "Sofia" },
+            };
         }
 
         /// <summary>

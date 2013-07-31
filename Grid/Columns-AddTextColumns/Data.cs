@@ -9,6 +9,7 @@ namespace Columns_AddTextColumns
     public class Data
     {
         public string Team { get; set; }
+
         public string Country { get; set; }
     }
 }

@@ -10,27 +10,32 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <telerikGrid:RadDataGrid ItemsSource="{Binding GridSource}">
+        <telerikGrid:RadDataGrid ItemsSource="{Binding GridSource}" SelectionMode="Multiple">
             <telerikGrid:RadDataGrid.Resources>
                 <Style TargetType="gridPrimitives:DataGridHoverControl">
                     <Setter Property="Background" Value="#8E6914"/>
                     <Setter Property="Opacity" Value="0.5"/>
                 </Style>
-  
-            <Style TargetType="gridPrimitives:SelectionRegionControl">
+
+                <Style TargetType="gridPrimitives:SelectionRegionBackgroundControl">
                     <Setter Property="Background" Value="#808080"/>
+                </Style>
+
+                <Style TargetType="gridPrimitives:SelectionRegionBorderControl">
                     <Setter Property="BorderBrush" Value="#80D6F4"/>
-                <Setter Property="BorderThickness" Value="2"/>
-            </Style>
-            <Style TargetType="gridPrimitives:DataGridColumnDragControl">
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Style>
+
+                <Style TargetType="gridPrimitives:DataGridColumnDragControl">
                     <Setter Property="Background" Value="#58622D"/>
                     <Setter Property="Foreground" Value="#FFB60C"/>
-            </Style>
-            <Style TargetType="gridPrimitives:DataGridFlyoutGroupHeader">
+                </Style>
+                
+                <Style TargetType="gridPrimitives:DataGridFlyoutGroupHeader">
                     <Setter Property="Background" Value="#B45121"/>
-            </Style>
+                </Style>
             </telerikGrid:RadDataGrid.Resources>
-            
+
             <telerikGrid:RadDataGrid.DataContext>
                 <local:ViewModel/>
             </telerikGrid:RadDataGrid.DataContext>

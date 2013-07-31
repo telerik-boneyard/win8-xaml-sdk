@@ -25,8 +25,9 @@ namespace Commands_GenerateColumnCommand
             else
             {
                 return true;
-            }          
+            }
         }
+
         public override void Execute(object parameter)
         {
             var context = parameter as GenerateColumnContext;

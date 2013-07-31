@@ -11,16 +11,10 @@ namespace Styling_GroupHeader
 {
     public class CustomStyleSelector : StyleSelector
     {
-        public Style ExpandedStyle
-        {
-            get;
-            set;
-        }
-        public Style CollapsedStyle
-        {
-            get;
-            set;
-        }
+        public Style ExpandedStyle { get; set; }
+
+        public Style CollapsedStyle { get; set; }
+
         protected override Style SelectStyleCore(object item, DependencyObject container)
         {
             if ((item as GroupHeaderContext).IsExpanded == true)
@@ -31,7 +25,6 @@ namespace Styling_GroupHeader
             {
                 return this.CollapsedStyle;
             }
-
         }
     }
 }

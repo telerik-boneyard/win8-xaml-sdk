@@ -11,16 +11,9 @@ namespace Styling_GroupHeader
 {
     public class CustomDataTemplateSelector : DataTemplateSelector
     {
-        public DataTemplate ExpandedTemplate
-        {
-            get;
-            set;
-        }
-        public DataTemplate CollapsedTemplate
-        {
-            get;
-            set;
-        }
+        public DataTemplate ExpandedTemplate { get; set; }
+
+        public DataTemplate CollapsedTemplate { get; set; }
 
         protected override DataTemplate SelectTemplateCore(object item, Windows.UI.Xaml.DependencyObject container)
         {

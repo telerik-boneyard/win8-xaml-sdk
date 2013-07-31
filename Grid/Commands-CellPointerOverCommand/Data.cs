@@ -10,7 +10,9 @@ namespace Commands_CellPointerOverCommand
     public class Data
     {
         public string Team { get; set; }
+
         public int Points { get; set; }
+
         public ObservableCollection<LastResults> LastMatches { get; set; }
     }
 }

@@ -17,7 +17,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Selection_GettingStarted
 {
-    
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -26,7 +25,6 @@ namespace Selection_GettingStarted
         public MainPage()
         {
             this.InitializeComponent();
-             
         }
 
         /// <summary>
@@ -44,7 +42,7 @@ namespace Selection_GettingStarted
             var selectedItem = grid.SelectedItem as DataGridCellInfo;
             if (grid.SelectedItem != null)
             {
-                textblock1.Text = String.Format("The selected item is {0}",selectedItem.Column.GetValueForInstance(selectedItem.Item).ToString());
+                textblock1.Text = String.Format("The selected item is {0}", selectedItem.Column.GetValueForInstance(selectedItem.Item).ToString());
                 textblock2.Text = String.Format("The selected item is in the {0} column", selectedItem.Column.Header.ToString());
             }
         }

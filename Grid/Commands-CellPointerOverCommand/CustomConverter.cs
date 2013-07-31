@@ -11,7 +11,6 @@ namespace Commands_CellPointerOverCommand
 {
     public class CustomConverter : IValueConverter
     {
-
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             if (parameter.ToString() == "brush")
@@ -44,8 +43,6 @@ namespace Commands_CellPointerOverCommand
                     return "W";
                 }
             }
-      
-
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

@@ -21,7 +21,6 @@ namespace Grouping_DelegateGroupDescriptor
             {
                 return (instance as DataClass).Country[0];
             }
-            
         }
     }
 }

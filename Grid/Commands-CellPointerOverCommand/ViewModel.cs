@@ -14,6 +14,7 @@ namespace Commands_CellPointerOverCommand
     public class ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
         ObservableCollection<LastResults> seriesSource;
          
         public ViewModel()
@@ -26,17 +27,17 @@ namespace Commands_CellPointerOverCommand
             var evertonHistory = new ObservableCollection<LastResults>() { new LastResults { Result = 2 }, new LastResults { Result = 2 }, new LastResults { Result = 2 }, new LastResults { Result = 1 }, new LastResults { Result = 2 }, new LastResults { Result = 1 } };
             this.GridSource = new ObservableCollection<Data>()
             {
-                new Data{ Team = "Manchester United", Points = 81, LastMatches = manchesterUHistory},
-                new Data{ Team = "Manchester City", Points = 68,LastMatches = manchesterCHistory },
-                new Data{ Team = "Chelsea", Points = 61,LastMatches = chelseaHistory },
-                new Data{ Team = "Arsenal", Points = 60,LastMatches = arsenalHistory },
-                new Data{ Team = "Tottenham", Points = 58,LastMatches = tottenhamHistory },
-                new Data{ Team = "Everton", Points = 56,LastMatches = evertonHistory },
-
+                new Data { Team = "Manchester United", Points = 81, LastMatches = manchesterUHistory },
+                new Data { Team = "Manchester City", Points = 68, LastMatches = manchesterCHistory },
+                new Data { Team = "Chelsea", Points = 61, LastMatches = chelseaHistory },
+                new Data { Team = "Arsenal", Points = 60, LastMatches = arsenalHistory },
+                new Data { Team = "Tottenham", Points = 58, LastMatches = tottenhamHistory },
+                new Data { Team = "Everton", Points = 56, LastMatches = evertonHistory },
             };
-             
         }
+
         string chartHeader;
+
         public string ChartHeader
         {
             get
@@ -49,7 +50,9 @@ namespace Commands_CellPointerOverCommand
                 OnPropertyChanged("ChartHeader");
             }
         }
+
         public ObservableCollection<Data> GridSource { get; set; }
+
         public ObservableCollection<LastResults> SeriesSource
         {
             get
@@ -71,9 +74,5 @@ namespace Commands_CellPointerOverCommand
                 handler(this, new PropertyChangedEventArgs(name));
             }
         }
-
-        
-
-        
     }
 }

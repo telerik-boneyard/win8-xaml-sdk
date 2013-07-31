@@ -9,6 +9,7 @@ namespace Commands_ColumnHeaderTapCommand
     public class CustomData
     {
         public string Team { get; set; }
+
         public double GroundCapacity { get; set; }
     }
 }

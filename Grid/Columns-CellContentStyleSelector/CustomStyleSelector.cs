@@ -11,16 +11,10 @@ namespace Columns_CellContentStyleSelector
 {
     public class CustomStyleSelector : StyleSelector
     {
-        public Style PoorMarkStyle
-        {
-            get;
-            set;
-        }
-        public Style ExcellentMarkStyle
-        {
-            get;
-            set;
-        }
+        public Style PoorMarkStyle { get; set; }
+
+        public Style ExcellentMarkStyle { get; set; }
+
         protected override Style SelectStyleCore(object item, DependencyObject container)
         {
             int mark = (int)((item as DataGridCellInfo).Item as CustomData).Mark;

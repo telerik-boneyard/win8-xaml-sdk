@@ -1,0 +1,3 @@
+﻿This example demonstrates how to add custom commands to the grid.
+When the user tries to edit a row a dialog box will appear asking whether the user should start editing.
+When the user tries to submit the changes of the edited row, another dialog box will ask for confirmation.

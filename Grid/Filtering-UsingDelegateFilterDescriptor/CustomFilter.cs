@@ -7,11 +7,9 @@ using Telerik.Data.Core;
 
 namespace Filtering_UsingDelegateFilterDescriptor
 {
-    
     public class CustomFilter : IFilter
     {
         public string CurrentFilter { get; set; }
-
         
         public bool PassesFilter(object item)
         {

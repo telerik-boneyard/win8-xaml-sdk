@@ -8,15 +8,8 @@ namespace Columns_CellContentStyleSelector
 {
     public class CustomData
     {
-        public string Subject
-        {
-            get;
-            set;
-        }
-        public int Mark
-        {
-            get;
-            set;
-        }
+        public string Subject { get; set; }
+
+        public int Mark { get; set; }
     }
 }

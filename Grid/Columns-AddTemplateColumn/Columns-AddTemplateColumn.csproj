@@ -104,12 +104,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <SDKReference Include="RadControls for Windows 8, Version=2013.1.417">
-      <Name>RadControls for Windows 8</Name>
-    </SDKReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -125,13 +119,13 @@
     <None Include="Columns-AddTemplateColumn_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Argentina.png" />
+    <Content Include="Images\Argentina.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Brazil.png" />
-    <Content Include="China.png" />
+    <Content Include="Images\Brazil.png" />
+    <Content Include="Images\China.png" />
     <Content Include="Description.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +141,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="RadControls for Windows 8, Version=2013.2.716">
+      <Name>RadControls for Windows 8</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

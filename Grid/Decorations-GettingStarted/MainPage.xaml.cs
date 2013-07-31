@@ -18,38 +18,24 @@ namespace Decorations_GettingStarted
 {
     public class Data
     {
-        public string Name
-        {
-            get;
-            set;
-        }
-        public string Title
-        {
-            get;
-            set;
-        }
-        public string Country
-        {
-            get;
-            set;
-        }
-        public string Address
-        {
-            get;
-            set;
-        }
+        public string Name { get; set; }
+
+        public string Title { get; set; }
+
+        public string Country { get; set; }
+
+        public string Address { get; set; }
     }
+
     public class ViewModel
     {
-        public List<Data> DataGrid
-        {
-            get;
-            set;
-        }
+        public List<Data> DataGrid { get; set; }
+
         public ViewModel()
         {
             DataGrid = CreateData();
         }
+
         public List<Data> CreateData()
         {
             List<Data> list = new List<Data>();

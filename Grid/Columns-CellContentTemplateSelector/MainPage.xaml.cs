@@ -19,17 +19,11 @@ namespace Columns_CellContentTemplateSelector
 {
     public class CustomObject
     {
-        public string Country
-        {
-            get;
-            set;
-        }
-        public BitmapImage Flag
-        {
-            get;
-            set;
-        }
+        public string Country { get; set; }
+
+        public BitmapImage Flag { get; set; }
     }
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -40,11 +34,11 @@ namespace Columns_CellContentTemplateSelector
             this.InitializeComponent();
 
             List<CustomObject> list = new List<CustomObject>();
-            list.Add(new CustomObject { Country = "Germany", Flag = new BitmapImage(new Uri("ms-appx:///Germany.png", UriKind.Absolute)) });
+            list.Add(new CustomObject { Country = "Germany", Flag = new BitmapImage(new Uri("ms-appx:///Images/Germany.png", UriKind.Absolute)) });
             list.Add(new CustomObject { Country = "England", Flag = null });
-            list.Add(new CustomObject { Country = "Mexico", Flag = new BitmapImage(new Uri("ms-appx:///Mexico.png", UriKind.Absolute)) });
+            list.Add(new CustomObject { Country = "Mexico", Flag = new BitmapImage(new Uri("ms-appx:///Images/Mexico.png", UriKind.Absolute)) });
             list.Add(new CustomObject { Country = "Kenya", Flag = null });
-            list.Add(new CustomObject { Country = "South-Africa", Flag = new BitmapImage(new Uri("ms-appx:///South-Africa.png", UriKind.Absolute)) });
+            list.Add(new CustomObject { Country = "South-Africa", Flag = new BitmapImage(new Uri("ms-appx:///Images/South-Africa.png", UriKind.Absolute)) });
             this.grid.ItemsSource = list;
         }
 

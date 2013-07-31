@@ -1,1 +1,1 @@
-﻿This example shows how to style the content in a RadDataGrid Column.
+﻿This example shows how to style the content in a RadDataGrid Column using the CellContentStyleSelector property.

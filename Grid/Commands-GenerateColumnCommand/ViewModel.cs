@@ -12,15 +12,14 @@ namespace Commands_GenerateColumnCommand
         public ViewModel()
         {
             this.GridSource = new ObservableCollection<Person>()
-                                                               {
-                                                                   new Person{ FirstName = "Ivaylo", LastName = "Gergov", ID = 9005194361},
-                                                                   new Person{ FirstName = "Aleksandar", LastName = "Petrov", ID = 8511120513},
-                                                                   new Person{ FirstName = "Tsvyatko", LastName = "Andonov", ID = 8608221001},
-                                                                   new Person{ FirstName = "Manol", LastName = "Zaimov", ID = 8210022011},
-
-                                                               };
+            {
+                new Person { FirstName = "Ivaylo", LastName = "Gergov", ID = 9005194361 },
+                new Person { FirstName = "Aleksandar", LastName = "Petrov", ID = 8511120513 },
+                new Person { FirstName = "Tsvyatko", LastName = "Andonov", ID = 8608221001 },
+                new Person { FirstName = "Manol", LastName = "Zaimov", ID = 8210022011 },
+            };
         }
-        public ObservableCollection<Person> GridSource { get; set; }
 
+        public ObservableCollection<Person> GridSource { get; set; }
     }
 }

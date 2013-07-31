@@ -4,5 +4,6 @@
     <RemoteDebugMachine>surface4</RemoteDebugMachine>
     <UseAuthentication>True</UseAuthentication>
     <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <UseSimulator>False</UseSimulator>
   </PropertyGroup>
 </Project>
