@@ -23,7 +23,6 @@ namespace DynamicSeries_UsingCollectionOfViewModels
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Random r = new Random();
         public MainPage()
         {
             this.InitializeComponent();
@@ -39,12 +38,12 @@ namespace DynamicSeries_UsingCollectionOfViewModels
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
-        public List<CustomPoint> GenerateData()
+        public List<CustomPoint> GenerateData(int i)
         {
             List<CustomPoint> data = new List<CustomPoint>();
-            data.Add(new CustomPoint { Category = "Apple", Value = r.Next(1, 20) });
-            data.Add(new CustomPoint { Category = "Orange", Value = r.Next(10, 30) });
-            data.Add(new CustomPoint { Category = "Lemon", Value = r.Next(20, 40) });
+            data.Add(new CustomPoint { Category = "Apple", Value = 4 + i });
+            data.Add(new CustomPoint { Category = "Orange", Value = 15 - i });
+            data.Add(new CustomPoint { Category = "Lemon", Value = 20 + i * i });
             return data;
         }
         public List<ViewModel> GenerateCollection()
@@ -53,7 +52,7 @@ namespace DynamicSeries_UsingCollectionOfViewModels
             for (int i = 0; i < 5; i++)
             {
                 ViewModel vm = new ViewModel();
-                vm.GetData = GenerateData();
+                vm.GetData = GenerateData(i);
                 collection.Add(vm);
             }
             return collection;

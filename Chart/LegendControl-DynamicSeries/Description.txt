@@ -1,0 +1,3 @@
+﻿This example demonstrates how to create RadChart with LegendControl using dynamic series.
+
+The key step is to set the SeriesDescriptors.LegendTitlePath property to match a property from your Model.

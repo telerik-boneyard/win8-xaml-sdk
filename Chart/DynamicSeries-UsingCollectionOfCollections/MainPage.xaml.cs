@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace DynamicSeries_UsingCollectionOfCollections
 {
-    
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -26,14 +26,13 @@ namespace DynamicSeries_UsingCollectionOfCollections
         {
             this.InitializeComponent();
             List<List<CustomPoint>> collection = new List<List<CustomPoint>>();
-            Random r = new Random();
 
             for (int i = 0; i < 5; i++)
             {
                 List<CustomPoint> data = new List<CustomPoint>();
-                data.Add(new CustomPoint { Category = "Apple", Value = r.Next(1, 20) });
-                data.Add(new CustomPoint { Category = "Orange", Value = r.Next(1, 20) });
-                data.Add(new CustomPoint { Category = "Lemon", Value = r.Next(1, 20) });
+                data.Add(new CustomPoint { Category = "Apple", Value = 4 + i });
+                data.Add(new CustomPoint { Category = "Orange", Value = 15 - i });
+                data.Add(new CustomPoint { Category = "Lemon", Value = 20 + i * i });
 
                 collection.Add(data);
             }

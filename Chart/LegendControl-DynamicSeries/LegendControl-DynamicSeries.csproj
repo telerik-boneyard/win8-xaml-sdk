@@ -4,15 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1571F9C5-3852-4EB4-8E7C-A8059F72DF42}</ProjectGuid>
+    <ProjectGuid>{0463A51F-0141-4D8E-9E6B-F9AA698FBDDA}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OhlcSeries_GettingStarted</RootNamespace>
-    <AssemblyName>OhlcSeries-GettingStarted</AssemblyName>
+    <RootNamespace>LegendControl_DynamicSeries</RootNamespace>
+    <AssemblyName>LegendControl-DynamicSeries</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>OhlcSeries-GettingStarted_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>LegendControl-DynamicSeries_TemporaryKey.pfx</PackageCertificateKeyFile>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
@@ -107,7 +107,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FinancialData.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -118,7 +118,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="OhlcSeries-GettingStarted_TemporaryKey.pfx" />
+    <None Include="LegendControl-DynamicSeries_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
