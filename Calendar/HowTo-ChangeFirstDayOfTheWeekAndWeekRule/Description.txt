@@ -1,0 +1,3 @@
+﻿This example demonstrates how to change the rule that defines the first week of the year and the first day of the week.
+
+To achieve this you have to create a custom culture using the CultureInfo class.
