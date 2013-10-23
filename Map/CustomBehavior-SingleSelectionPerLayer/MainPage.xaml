@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="CustomBehavior_SingleSelectionPerLayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CustomBehavior_SingleSelectionPerLayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikMap="using:Telerik.UI.Xaml.Controls.Map"
+    xmlns:telerikDrawing="using:Telerik.UI.Drawing"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <telerikMap:ShapefileDataSource x:Key="WorldSubCountryAdminUnits"
+                                        SourceUriString="ms-appx:///Data/world_subcountry_admin_unit.shp" 
+                                        DataSourceUriString="ms-appx:///Data/world_subcountry_admin_unit.dbf" />
+        <telerikMap:ShapefileDataSource x:Key="WorldCountryAdminUnits" 
+                                        SourceUriString="ms-appx:///Data/world_country_admin_unit.shp" 
+                                        DataSourceUriString="ms-appx:///Data/world_country_admin_unit.dbf" 
+                                        ShapeProcessingCompleted="ShapefileDataSource_ShapeProcessingCompleted"/>
+    </Page.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikMap:RadMap Background="#7BD5FB" x:Name="radMap">
+            <telerikMap:RadMap.Layers>
+                <telerikMap:MapShapeLayer Source="{StaticResource WorldSubCountryAdminUnits}">
+                    <telerikMap:MapShapeLayer.ShapeStyle>
+                        <telerikDrawing:D2DShapeStyle>
+                            <telerikDrawing:D2DShapeStyle.Fill>
+                                <telerikDrawing:D2DSolidColorBrush Color="#FFFFFFFF" />
+                            </telerikDrawing:D2DShapeStyle.Fill>
+                            <telerikDrawing:D2DShapeStyle.Stroke>
+                                <telerikDrawing:D2DSolidColorBrush Color="#FF7BD5FB" />
+                            </telerikDrawing:D2DShapeStyle.Stroke>
+                        </telerikDrawing:D2DShapeStyle>
+                    </telerikMap:MapShapeLayer.ShapeStyle>
+                    <telerikMap:MapShapeLayer.ShapePointerOverStyle>
+                        <telerikDrawing:D2DShapeStyle>
+                            <telerikDrawing:D2DShapeStyle.Fill>
+                                <telerikDrawing:D2DSolidColorBrush Color="#FFECBF34" />
+                            </telerikDrawing:D2DShapeStyle.Fill>
+                        </telerikDrawing:D2DShapeStyle>
+                    </telerikMap:MapShapeLayer.ShapePointerOverStyle>
+                    <telerikMap:MapShapeLayer.ShapeSelectedStyle>
+                        <telerikDrawing:D2DShapeStyle>
+                            <telerikDrawing:D2DShapeStyle.Fill>
+                                <telerikDrawing:D2DSolidColorBrush Color="#FFECBF34" />
+                            </telerikDrawing:D2DShapeStyle.Fill>
+                        </telerikDrawing:D2DShapeStyle>
+                    </telerikMap:MapShapeLayer.ShapeSelectedStyle>
+                </telerikMap:MapShapeLayer>
+
+                <telerikMap:MapShapeLayer Source="{StaticResource WorldCountryAdminUnits}" IsPointerOverEnabled="False" ShapeStyle="{x:Null}">
+                    <telerikMap:MapShapeLayer.ShapeSelectedStyle>
+                        <telerikDrawing:D2DShapeStyle StrokeThickness="1">
+                            <telerikDrawing:D2DShapeStyle.Fill>
+                                <telerikDrawing:D2DSolidColorBrush Color="#20FFD800" />
+                            </telerikDrawing:D2DShapeStyle.Fill>
+                            <telerikDrawing:D2DShapeStyle.Stroke>
+                                <telerikDrawing:D2DSolidColorBrush Color="#FFECBF34" />
+                            </telerikDrawing:D2DShapeStyle.Stroke>
+                        </telerikDrawing:D2DShapeStyle>
+                    </telerikMap:MapShapeLayer.ShapeSelectedStyle>
+                </telerikMap:MapShapeLayer>
+            </telerikMap:RadMap.Layers>
+
+            <telerikMap:RadMap.Behaviors>
+                <telerikMap:MapShapePointerOverBehavior/>
+                <local:SingleSelectionPerLayerBehavior/>
+            </telerikMap:RadMap.Behaviors>
+        </telerikMap:RadMap>
+    </Grid>
+</Page>

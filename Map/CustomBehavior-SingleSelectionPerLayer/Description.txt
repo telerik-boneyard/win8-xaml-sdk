@@ -1,0 +1,1 @@
+﻿This example demonstrates how to create a custom behavior that restricts a single shape to be selected per layer.

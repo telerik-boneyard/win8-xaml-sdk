@@ -1,0 +1,1 @@
+﻿This example demonstrates how to restrict the available area for panning - the selected shape could be panned only within the screen bounds.

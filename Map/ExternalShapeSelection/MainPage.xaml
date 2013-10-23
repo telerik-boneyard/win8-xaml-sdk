@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="ExternalShapeSelection.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ExternalShapeSelection"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikMap="using:Telerik.UI.Xaml.Controls.Map"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel  Orientation="Vertical" Grid.Column="0">
+            <Button HorizontalAlignment="Stretch" Click="SelectShape" Content="Italy"/>
+            <Button HorizontalAlignment="Stretch" Click="SelectShape" Content="Germany"/>
+            <Button HorizontalAlignment="Stretch" Click="SelectShape" Content="Poland"/>
+            <Button HorizontalAlignment="Stretch" Click="SelectShape" Content="United Kingdom"/>
+            <Button HorizontalAlignment="Stretch" Click="SelectShape" Content="Russia"/>
+            <Button HorizontalAlignment="Stretch" Click="SelectShape" Content="France"/>
+        </StackPanel>
+        <telerikMap:RadMap x:Name="radMap" Grid.Column="1">
+            <telerikMap:RadMap.Layers>
+                <telerikMap:MapShapeLayer IsSelectionEnabled="False">
+                    <telerikMap:MapShapeLayer.Source>
+                        <telerikMap:ShapefileDataSource SourceUriString = "ms-appx:///Data/europe.shp" DataSourceUriString = "ms-appx:///Data/europe.dbf"
+                                                        ShapeProcessingCompleted="ShapefileDataSource_ShapeProcessingCompleted"/>
+                    </telerikMap:MapShapeLayer.Source>
+                </telerikMap:MapShapeLayer>
+            </telerikMap:RadMap.Layers>
+            
+            <telerikMap:RadMap.Behaviors>
+                <telerikMap:MapShapeSelectionBehavior SelectedShape="{Binding SelectedShape, Mode=TwoWay}"/>
+            </telerikMap:RadMap.Behaviors>
+        </telerikMap:RadMap>
+    </Grid>
+</Page>

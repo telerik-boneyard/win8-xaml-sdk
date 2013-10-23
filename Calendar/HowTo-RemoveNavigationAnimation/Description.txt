@@ -1,0 +1,3 @@
+﻿This example demonstrates how to remove the animation that is executed when navigating to Upper View.
+
+You have to create a custom implementation of the MoveToUpperView command and set the AnimationStoryboard to null.

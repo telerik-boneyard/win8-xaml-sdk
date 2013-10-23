@@ -1,0 +1,1 @@
+﻿This example demonstrates how set the best view for a map layer when the Source of the layer is changed.

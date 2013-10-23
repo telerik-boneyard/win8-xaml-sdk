@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="SetBestViewOnShapeFileSourceChangedCommand.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SetBestViewOnShapeFileSourceChangedCommand"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikMap="using:Telerik.UI.Xaml.Controls.Map"
+    xmlns:telerikDrawing="using:Telerik.UI.Drawing"
+    mc:Ignorable="d">
+    
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel  Grid.Column="0">
+            <Button Content="Africa" Command="{Binding ChangeSourceCommand}" CommandParameter="africa" HorizontalAlignment="Stretch"/>
+            <Button Content="South America" Command="{Binding ChangeSourceCommand}" CommandParameter="south_america" HorizontalAlignment="Stretch"/>
+            <Button Content="Europe" Command="{Binding ChangeSourceCommand}" CommandParameter="europe" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+
+        <telerikMap:RadMap Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <telerikMap:RadMap.Layers>
+                <telerikMap:MapShapeLayer>
+                    <telerikMap:MapShapeLayer.Source>
+                        <telerikMap:ShapefileDataSource SourceUriString="{Binding SourceUriString}" DataSourceUriString="{Binding DataSourceUriString}"/>
+                    </telerikMap:MapShapeLayer.Source>
+                </telerikMap:MapShapeLayer>
+            </telerikMap:RadMap.Layers>
+            
+            <telerikMap:RadMap.Commands>
+                <local:SetBestViewCommand/>
+            </telerikMap:RadMap.Commands>
+        </telerikMap:RadMap>
+    </Grid>
+</Page>
