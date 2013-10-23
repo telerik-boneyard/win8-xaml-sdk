@@ -1,0 +1,1 @@
+﻿This example demonstrates how to perform a shape selection that is not triggered by a touch interaction with the map.

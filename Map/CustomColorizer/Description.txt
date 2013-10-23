@@ -1,0 +1,1 @@
+﻿This example demostrates how to implement a custom MapShapeColorizer. The world countries are colored differently depending on their population density.
