@@ -8,17 +8,14 @@
     xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+ 
 
-        <ListView  x:Name="listview" Grid.Column="0" Margin="120" SelectedIndex="0">
+        <ListView  x:Name="listview"  SelectedIndex="0">
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPieChart PaletteName="DefaultDark" Width="700">
+                        <telerikChart:RadPieChart PaletteName="DefaultDark" Width="700" Height="700">
                             <telerikChart:RadPieChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPieChart.DataContext>
@@ -30,13 +27,13 @@
                         </telerikChart:RadPieChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="Pie Series" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock Text="Pie Series" FontSize="20" Padding="0,0,25,0" Margin="10,0,0,0"/>
             </ListViewItem>
 
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                            <telerikChart:RadPieChart PaletteName="DefaultDark" Width="700">
+                            <telerikChart:RadPieChart PaletteName="DefaultDark" Width="700" Height="700">
                             <telerikChart:RadPieChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPieChart.DataContext>
@@ -48,12 +45,11 @@
                         </telerikChart:RadPieChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="Doughnut Series" FontSize="18" Margin="5,0,0,0"/>
+                <TextBlock Text="Doughnut Series" FontSize="18" Padding="0,0,25,0" Margin="10,0,0,0"/>
             </ListViewItem>
 
         </ListView>
 
-        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" 
-                        Grid.Column="1" Margin="100" />
-    </Grid>
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}"/>
+    </StackPanel>
 </Page>

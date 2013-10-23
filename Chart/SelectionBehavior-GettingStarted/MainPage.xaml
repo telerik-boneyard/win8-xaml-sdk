@@ -8,12 +8,9 @@
     xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <telerikChart:RadCartesianChart       
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+         
+        <telerikChart:RadCartesianChart Width="600" Height="600"      
                                         SelectionPaletteName="DefaultDarkSelected"
                                         PaletteName="DefaultDark">
             <telerikChart:RadCartesianChart.DataContext>
@@ -41,7 +38,7 @@
         </telerikChart:RadCartesianChart>
         
         
-        <Border BorderThickness="1" BorderBrush="#FFC236" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" >
+        <Border BorderThickness="1" BorderBrush="#FFC236" >
             <StackPanel>
                 <TextBlock x:Name="textblock1" FontSize="20" TextWrapping="Wrap" Margin="10" Text="No Point selected" Width="300"/>
                 <TextBlock x:Name="textblock2" FontSize="20" TextWrapping="Wrap" Margin="10" Text="No Point selected" Width="300"/>
@@ -49,5 +46,5 @@
             </StackPanel>
         </Border>
         
-    </Grid>
+    </StackPanel>
 </Page>

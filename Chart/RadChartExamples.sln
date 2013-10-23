@@ -62,7 +62,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegendControl-DynamicSeries", "LegendControl-DynamicSeries\LegendControl-DynamicSeries.csproj", "{0463A51F-0141-4D8E-9E6B-F9AA698FBDDA}"
 EndProject
 Global
-	
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM

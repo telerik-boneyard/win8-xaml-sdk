@@ -8,22 +8,19 @@
     xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+     
 
-        <ListView  x:Name="listview" Grid.Column="0" Margin="100" SelectedIndex="0">
+        <ListView  x:Name="listview"  SelectedIndex="0">
             <ListViewItem>
-                <TextBlock Text=" CustomPaletteCSharp" FontSize="20" Margin="5,0,0,0"/>     
+                <TextBlock Text=" CustomPaletteCSharp" FontSize="20" Padding="0,0,25,0" Margin="10,0,0,0"/>     
                 <ListViewItem.DataContext>
                     <local:CustomPalettes/>
                 </ListViewItem.DataContext>
             </ListViewItem>
             <ListViewItem>
-                <TextBlock Text=" CustomPaletteXAML" FontSize="20" Margin="5,0,0,0"/>               
+                <TextBlock Text=" CustomPaletteXAML" FontSize="20" Padding="0,0,25,0" Margin="10,0,0,0"/>               
                 <ListViewItem.DataContext>
                     <telerikChart:ChartPalette>
                         <telerikChart:ChartPalette.FillEntries>
@@ -45,8 +42,7 @@
             </ListViewItem>
         </ListView>
 
-        <telerikChart:RadCartesianChart x:Name="chart" Palette="{Binding SelectedItem.DataContext, ElementName=listview}"
-                                         Grid.Column="1" Margin="100"> 
+        <telerikChart:RadCartesianChart x:Name="chart" Width="600" Height="600" Palette="{Binding SelectedItem.DataContext, ElementName=listview}"> 
           
             <telerikChart:RadCartesianChart.DataContext>
                 <local:ViewModel/>
@@ -66,5 +62,5 @@
                 </telerikChart:BarSeries.ValueBinding>
             </telerikChart:BarSeries>
         </telerikChart:RadCartesianChart>
-    </Grid>
+    </StackPanel>
 </Page>

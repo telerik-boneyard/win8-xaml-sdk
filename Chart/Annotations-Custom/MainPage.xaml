@@ -9,17 +9,14 @@
     xmlns:telerikCharting="using:Telerik.Charting"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <ListView x:Name="listview" Margin="100" SelectedIndex="0">
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+  
+        <ListView x:Name="listview"  SelectedIndex="0">
             <ListViewItem>
-                <TextBlock Text="CartesianChart Custom Annotations" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock Text="CartesianChart Custom Annotations" FontSize="20" Padding="0,0,25,0" Margin="10,0,0,0"/>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadCartesianChart x:Name="cartesianChart">
+                        <telerikChart:RadCartesianChart x:Name="cartesianChart" Width="600" Height="600">
 
                             <telerikChart:RadCartesianChart.Annotations>
                                 <telerikChart:CartesianCustomAnnotation HorizontalValue="2" VerticalValue="2" Content="Custom content" />
@@ -61,10 +58,10 @@
             </ListViewItem>
 
             <ListViewItem>
-                <TextBlock Text="PolarChart Custom Annotations" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock Text="PolarChart Custom Annotations" FontSize="20" Padding="0,0,25,0" Margin="10,0,0,0"/>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPolarChart>
+                        <telerikChart:RadPolarChart Width="600" Height="600">
 
                             <telerikChart:RadPolarChart.Annotations>
                                 <telerikChart:PolarCustomAnnotation PolarValue="3" RadialValue="70" Content="Custom content" />
@@ -126,7 +123,7 @@
             </ListViewItem>
         </ListView>
 
-        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" Grid.Column="1" Margin="100"/>
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" />
 
-    </Grid>
+    </StackPanel>
 </Page>
