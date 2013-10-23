@@ -1,0 +1,3 @@
+﻿This example demonstrates how to attach one RadRadialMenu instance to different target elements. 
+The problem is that the RadRadialMenu is a FrameworkElement and if you define it directly in the Resources of the Page, it will be attached to the visual tree as a child of the Page. This leads to a problem - when the menu is used as a contex menu, it is visualized in a popup; if the menu is already in the children collection of the page, it can not be added as a child of the popup. 
+As a workaround you can create a class that has a RadRadialMenu property that will hold the instance of the radial menu we will reuse. This class is not a FrameworkElement, hence it will not be added to the visual tree and we will avoid the problem. 

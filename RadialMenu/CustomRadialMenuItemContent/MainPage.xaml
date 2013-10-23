@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="CustomRadialMenuItemContent.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CustomRadialMenuItemContent"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
+    xmlns:telerikPrimitivesMenu="using:Telerik.UI.Xaml.Controls.Primitives.Menu"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <telerikPrimitives:RadRadialMenu Width="300" Height="300">
+            <telerikPrimitives:RadRadialMenu.Resources>
+                <Style TargetType="telerikPrimitivesMenu:RadialMenuItemControl">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="telerikPrimitivesMenu:RadialMenuItemControl">
+                                <StackPanel>
+                                    <ContentPresenter VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                                                      FontSize="14" Content="{TemplateBinding Header}" >
+                                    </ContentPresenter>
+                                    <ContentPresenter VerticalAlignment="Bottom" HorizontalAlignment="Center" 
+                                                      Width="30" Height="30" 
+                                                      Content="{TemplateBinding IconContent}">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </telerikPrimitives:RadRadialMenu.Resources>
+
+            <telerikPrimitives:RadialMenuItem>
+                <telerikPrimitives:RadialMenuItem.Header>
+                    <TextBlock Foreground="#3B5998">Facebook</TextBlock>
+                </telerikPrimitives:RadialMenuItem.Header>
+                <telerikPrimitives:RadialMenuItem.IconContent>
+                    <Image  Source="ms-appx:///Images/facebook.png"/>
+                </telerikPrimitives:RadialMenuItem.IconContent>
+            </telerikPrimitives:RadialMenuItem>
+            <telerikPrimitives:RadialMenuItem>
+                <telerikPrimitives:RadialMenuItem.Header>
+                    <TextBlock Foreground="#4099FF">Twitter</TextBlock>
+                </telerikPrimitives:RadialMenuItem.Header>
+                <telerikPrimitives:RadialMenuItem.IconContent>
+                    <Image  Source="ms-appx:///Images/twitter.png"/>
+                </telerikPrimitives:RadialMenuItem.IconContent>
+            </telerikPrimitives:RadialMenuItem>
+            <telerikPrimitives:RadialMenuItem>
+                <telerikPrimitives:RadialMenuItem.Header>
+                    <TextBlock Foreground="#C92C19">Mail</TextBlock>
+                </telerikPrimitives:RadialMenuItem.Header>
+                <telerikPrimitives:RadialMenuItem.IconContent>
+                    <Image  Source="ms-appx:///Images/mail.png"/>
+                </telerikPrimitives:RadialMenuItem.IconContent>
+            </telerikPrimitives:RadialMenuItem>
+        </telerikPrimitives:RadRadialMenu>
+    </Grid>
+</Page>
