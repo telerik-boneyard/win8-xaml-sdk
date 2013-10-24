@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +25,6 @@ namespace Commands_CellDoubleTappedCommand
 
         public override void Execute(object parameter)
         {
-            var index = this.Owner.Columns.IndexOf((parameter as DataGridCellInfo).Column);
-           
-             
             (this.CurrentFrame as Frame).Navigate(typeof(DetailsPage), (parameter as DataGridCellInfo).Item as Data);
         }
     }

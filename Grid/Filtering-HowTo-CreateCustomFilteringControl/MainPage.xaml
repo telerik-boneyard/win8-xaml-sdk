@@ -12,10 +12,12 @@
         <local:ViewModel/>
     </Page.DataContext>
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <telerikGrid:RadDataGrid Width="500" AutoGenerateColumns="False" Height="500" ItemsSource="{Binding Data}">
+        <telerikGrid:RadDataGrid ItemsSource="{Binding Data}"
+                                 Width="300" Height="500" 
+                                 AutoGenerateColumns="False">
             <telerikGrid:RadDataGrid.Columns>
-                <telerikGrid:DataGridTextColumn PropertyName="Country"/>
-                <telerikGrid:DataGridTextColumn PropertyName="Continent"/>
+                <telerikGrid:DataGridTextColumn PropertyName="Name"/>
+                <telerikGrid:DataGridTextColumn PropertyName="EyeColor" Header="Eye Color" local:ColumnMarker.RequiresCustomFiltering="True"/>
             </telerikGrid:RadDataGrid.Columns>
             <telerikGrid:RadDataGrid.Commands>
                 <local:CustomFilterButtonTapCommand/>

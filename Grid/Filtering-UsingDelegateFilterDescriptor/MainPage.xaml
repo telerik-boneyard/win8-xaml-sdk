@@ -13,7 +13,7 @@
             <RowDefinition Height="110"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="0,50,330,0">
+        <StackPanel >
             <TextBlock Text="Filter by City"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
