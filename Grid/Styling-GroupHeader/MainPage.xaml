@@ -28,21 +28,21 @@
                 <DataTemplate>
                     <TextBlock Text="{Binding Group.Key}" Foreground="#21A6FF" 
                        FontStyle="Italic" 
-                       Margin="115,0,0,0" VerticalAlignment="Center"/>
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </DataTemplate>
             </local:CustomDataTemplateSelector.ExpandedTemplate>
             <local:CustomDataTemplateSelector.CollapsedTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Group.Key}" Foreground="#FFDE5B" 
                        FontStyle="Italic" 
-                       Margin="115,0,0,0" VerticalAlignment="Center"/>
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </DataTemplate>
             </local:CustomDataTemplateSelector.CollapsedTemplate>
         </local:CustomDataTemplateSelector>
 
     </Page.Resources>
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <telerikGrid:RadDataGrid x:Name="grid" ItemsSource="{Binding GridSource}" Width="500"
+        <telerikGrid:RadDataGrid x:Name="grid" ItemsSource="{Binding GridSource}"
                   GroupHeaderTemplateSelector="{StaticResource TemplateSelector}"
                   GroupHeaderStyleSelector="{StaticResource StyleSelector}">
             <telerikGrid:RadDataGrid.DataContext>

@@ -8,18 +8,15 @@
     xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+     
 
-        <ListView  x:Name="listview" Grid.Column="0" Margin="100" SelectedIndex="0">
+        <ListView  x:Name="listview"  Margin="20" SelectedIndex="0">
 
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPolarChart>
+                        <telerikChart:RadPolarChart Width="600" Height="600">
                             <telerikChart:RadPolarChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPolarChart.DataContext>
@@ -40,13 +37,13 @@
                         </telerikChart:RadPolarChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="PolarArea Series" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock  Text="PolarArea Series" FontSize="20" Padding="0,0,25,0" Margin="5,0,0,0"/>
             </ListViewItem>
             
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPolarChart>
+                        <telerikChart:RadPolarChart Width="600" Height="600">
                             <telerikChart:RadPolarChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPolarChart.DataContext>
@@ -67,13 +64,13 @@
                         </telerikChart:RadPolarChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="PolarSplineArea Series" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock  Text="PolarSplineArea Series" FontSize="20" Padding="0,0,25,0" Margin="5,0,0,0"/>
             </ListViewItem>
 
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPolarChart>
+                        <telerikChart:RadPolarChart Width="600" Height="600">
                             <telerikChart:RadPolarChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPolarChart.DataContext>
@@ -94,13 +91,13 @@
                         </telerikChart:RadPolarChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="PolarLine Series" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock Text="PolarLine Series" FontSize="20" Padding="0,0,25,0" Margin="5,0,0,0"/>
             </ListViewItem>
 
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPolarChart>
+                        <telerikChart:RadPolarChart Width="600" Height="600">
                             <telerikChart:RadPolarChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPolarChart.DataContext>
@@ -121,13 +118,13 @@
                         </telerikChart:RadPolarChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="PolarSpline Series" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock  Text="PolarSpline Series" FontSize="20" Padding="0,0,25,0" Margin="5,0,0,0"/>
             </ListViewItem>
             
             <ListViewItem>
                 <ListViewItem.DataContext>
                     <DataTemplate>
-                        <telerikChart:RadPolarChart>
+                        <telerikChart:RadPolarChart Width="600" Height="600">
                             <telerikChart:RadPolarChart.DataContext>
                                 <local:ViewModel/>
                             </telerikChart:RadPolarChart.DataContext>
@@ -148,12 +145,12 @@
                         </telerikChart:RadPolarChart>
                     </DataTemplate>
                 </ListViewItem.DataContext>
-                <TextBlock Text="PolarPoint Series" FontSize="20" Margin="5,0,0,0"/>
+                <TextBlock  Text="PolarPoint Series" FontSize="20" Padding="0,0,25,0" Margin="5,0,0,0"/>
             </ListViewItem>
 
 
         </ListView>
 
-        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}" Grid.Column="1" Margin="100"/>
-    </Grid>
+        <ContentControl ContentTemplate="{Binding SelectedItem.DataContext, ElementName=listview}"/>
+    </StackPanel>
 </Page>

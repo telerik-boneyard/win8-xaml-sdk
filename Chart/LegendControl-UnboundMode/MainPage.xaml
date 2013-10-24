@@ -9,13 +9,9 @@
     xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="600"/>
-        </Grid.ColumnDefinitions>
-        <telerikChart:RadCartesianChart PaletteName="DefaultDark" Grid.Column="2">
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+        
+        <telerikChart:RadCartesianChart PaletteName="DefaultDark" Width="600" Height="600">
             <telerikChart:RadCartesianChart.DataContext>
                 <local:ViewModel/>
             </telerikChart:RadCartesianChart.DataContext>
@@ -35,12 +31,12 @@
             </telerikChart:BarSeries>
         </telerikChart:RadCartesianChart>
         
-        <telerikPrimitives:RadLegendControl Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,10,0">
+        <telerikPrimitives:RadLegendControl VerticalAlignment="Center" Margin="0,0,10,0">
             <telerikPrimitives:RadLegendControl.LegendItems>
                 <telerikPrimitives:LegendItem Fill="#1E98E4" Stroke="#1E98E4" Title="Orange"/>
                 <telerikPrimitives:LegendItem Fill="#FFC500" Stroke="#FFC500" Title="Apple"/>
                 <telerikPrimitives:LegendItem Fill="#FF2A00" Stroke="#FF2A00" Title="Lemon"/>
             </telerikPrimitives:RadLegendControl.LegendItems>
         </telerikPrimitives:RadLegendControl>
-    </Grid>
+    </StackPanel>
 </Page>

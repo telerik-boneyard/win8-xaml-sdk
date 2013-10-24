@@ -1,0 +1,2 @@
+﻿This example demonstrates how to use a custom behavior that will perform additional logic when attaching the RadRadialMenu to the target element.
+The RadRadialMenu will be attached to a target TextBox element when the text in the TextBox is changed and it will be detached when the Esc button is pressed.

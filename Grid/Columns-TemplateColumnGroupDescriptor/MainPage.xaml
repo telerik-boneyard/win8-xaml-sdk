@@ -27,7 +27,7 @@
                         </DataTemplate>
                     </telerikGrid:DataGridTemplateColumn.CellContentTemplate>                  
                     <telerikGrid:DataGridTemplateColumn.GroupDescriptor>
-                        <telerikGrid:DelegateGroupDescriptor>
+                        <telerikGrid:DelegateGroupDescriptor DisplayContent="Name">
                             <telerikGrid:DelegateGroupDescriptor.KeyLookup>
                                 <local:NameCustomKeyLoookup/>
                             </telerikGrid:DelegateGroupDescriptor.KeyLookup>

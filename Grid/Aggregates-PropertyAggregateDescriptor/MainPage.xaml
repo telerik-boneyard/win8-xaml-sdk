@@ -17,6 +17,7 @@
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <telerikGrid:RadDataGrid
             Width="500" Height="500"
+            UserEditMode="Inline" UserColumnReorderMode="None" UserGroupMode="Disabled" UserSortMode="None"
             x:Name="grid"
             ItemsSource="{Binding GridSource}" >
             <telerikGrid:RadDataGrid.GroupHeaderTemplate>

@@ -9,7 +9,7 @@
     xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
         <telerikChart:RadPieChart x:Name="chart" PaletteName="DefaultDark" Width="700" Height="700">
             <telerikChart:PieSeries ItemsSource="{Binding}" RadiusFactor="0.8">
                 <telerikChart:PieSeries.ValueBinding>
@@ -20,7 +20,7 @@
                 </telerikChart:PieSeries.LegendTitleBinding>
             </telerikChart:PieSeries>
         </telerikChart:RadPieChart>
-        <telerikPrimitives:RadLegendControl LegendProvider="{Binding ElementName=chart}"  Margin="600,150,0,50"  >
+        <telerikPrimitives:RadLegendControl LegendProvider="{Binding ElementName=chart}" VerticalAlignment="Center"   >
             <telerikPrimitives:RadLegendControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Vertical"/>
@@ -36,5 +36,5 @@
             </telerikPrimitives:RadLegendControl.ItemTemplate>
         </telerikPrimitives:RadLegendControl>
 
-    </Grid>
+    </StackPanel>
 </Page>

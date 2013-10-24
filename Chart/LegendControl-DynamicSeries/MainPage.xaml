@@ -9,9 +9,10 @@
     xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-            <telerikChart:RadCartesianChart x:Name="chart" Width="350" Height="350" PaletteName="DefaultDark"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,160,0">
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+
+        <telerikChart:RadCartesianChart x:Name="chart" Width="500" Height="500" 
+                                            PaletteName="DefaultDark"  VerticalAlignment="Center" Margin="20">
                 <telerikChart:RadCartesianChart.HorizontalAxis>
                     <telerikChart:CategoricalAxis/>
                 </telerikChart:RadCartesianChart.HorizontalAxis>
@@ -32,7 +33,7 @@
                     </telerikChart:ChartSeriesProvider>
                 </telerikChart:RadCartesianChart.SeriesProvider>
             </telerikChart:RadCartesianChart>
-            <telerikPrimitives:RadLegendControl LegendProvider="{Binding ElementName=chart}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="160,0,0,0"/>
-        </Grid>
-    </Grid>
+            <telerikPrimitives:RadLegendControl LegendProvider="{Binding ElementName=chart}" VerticalAlignment="Center" Margin="20"/>
+ 
+    </StackPanel>
 </Page>

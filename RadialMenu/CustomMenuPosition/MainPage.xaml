@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="CustomMenuPosition.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CustomMenuPosition"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
+    xmlns:telerikPrimitivesMenu="using:Telerik.UI.Xaml.Controls.Primitives.Menu"
+    mc:Ignorable="d">
+    
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+    
+    <Page.Resources>
+        <Style TargetType="Border" x:Key="BorderStyle">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="NavigationMenuStyle">
+            <Setter Property="Fill" Value="Transparent"/>
+            <Setter Property="StrokeThickness" Value="0"/>
+        </Style>
+
+        <Style TargetType="Rectangle" x:Key="ContentMenuStyle">
+            <Setter Property="Fill" Value="Transparent"/>
+            <Setter Property="StrokeThickness" Value="0"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <ListView ItemsSource="{Binding Images}" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionMode="None">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Vertical" MaximumRowsOrColumns="3" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="255" Height="255">
+                        <telerikPrimitives:RadRadialContextMenu.Menu>
+                            <telerikPrimitives:RadRadialMenu Width="250" ContentMenuBackgroundStyle="{StaticResource ContentMenuStyle}" NavigationMenuBackgroundStyle="{StaticResource NavigationMenuStyle}">
+                                <telerikPrimitives:RadRadialMenu.Resources>
+                                    <Style TargetType="telerikPrimitivesMenu:DecorationItemButton">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style>
+                                </telerikPrimitives:RadRadialMenu.Resources>
+                                
+                                <telerikPrimitives:RadialMenuItem Selectable="False">
+                                    <telerikPrimitives:RadialMenuItem.IconContent>
+                                        <Border Style="{StaticResource BorderStyle}">
+                                            <TextBlock Text="&#xe102;" Style="{StaticResource TextBlockStyle}"/>
+                                        </Border>
+                                    </telerikPrimitives:RadialMenuItem.IconContent>
+                                </telerikPrimitives:RadialMenuItem>
+
+                                <telerikPrimitives:RadialMenuItem Selectable="False">
+                                    <telerikPrimitives:RadialMenuItem.IconContent>
+                                        <Border Style="{StaticResource BorderStyle}">
+                                            <TextBlock Text="&#xe14b;" Style="{StaticResource TextBlockStyle}"/>
+                                        </Border>
+                                    </telerikPrimitives:RadialMenuItem.IconContent>
+                                </telerikPrimitives:RadialMenuItem>
+
+                                <telerikPrimitives:RadialMenuItem Selectable="False">
+                                    <telerikPrimitives:RadialMenuItem.IconContent>
+                                        <Border Style="{StaticResource BorderStyle}">
+                                            <TextBlock Text="&#xe118;" Style="{StaticResource TextBlockStyle}"/>
+                                        </Border>
+                                    </telerikPrimitives:RadialMenuItem.IconContent>
+                                </telerikPrimitives:RadialMenuItem>
+                                
+                                <telerikPrimitives:RadialMenuItem Selectable="False">
+                                    <telerikPrimitives:RadialMenuItem.IconContent>
+                                        <Border Style="{StaticResource BorderStyle}">
+                                            <TextBlock Text="&#xe1ce;" Style="{StaticResource TextBlockStyle}"/>
+                                        </Border>
+                                    </telerikPrimitives:RadialMenuItem.IconContent>
+                                </telerikPrimitives:RadialMenuItem>
+                                
+                                <telerikPrimitives:RadialMenuItem Selectable="False">
+                                    <telerikPrimitives:RadialMenuItem.IconContent>
+                                        <Border Style="{StaticResource BorderStyle}">
+                                            <TextBlock Text="&#xe128;" Style="{StaticResource TextBlockStyle}"/>
+                                        </Border>
+                                    </telerikPrimitives:RadialMenuItem.IconContent>
+                                </telerikPrimitives:RadialMenuItem>
+                            </telerikPrimitives:RadRadialMenu>
+                        </telerikPrimitives:RadRadialContextMenu.Menu>
+                        
+                        <telerikPrimitives:RadRadialContextMenu.Behavior>
+                            <local:CustomPositionTriggerBehavior/>
+                        </telerikPrimitives:RadRadialContextMenu.Behavior>
+                    </Image>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

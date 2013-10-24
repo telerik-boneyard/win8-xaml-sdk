@@ -8,8 +8,8 @@
     xmlns:telerikChart="using:Telerik.UI.Xaml.Controls.Chart"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <telerikChart:RadCartesianChart x:Name="OhlcChart" Width="700" Height="700" PaletteName="DefaultLightSelected" HorizontalAlignment="Left">
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Horizontal">
+        <telerikChart:RadCartesianChart x:Name="OhlcChart"  Width="700" Height="700" PaletteName="DefaultLightSelected" Margin="50,0,0,0" >
             <telerikChart:RadCartesianChart.Indicators>
 
                 <telerikChart:BollingerBandsIndicator ItemsSource="{Binding}" Period="2" StandardDeviations="2" Stroke="White" StrokeThickness="2" LowerBandStroke="Red">
@@ -49,7 +49,7 @@
             </telerikChart:RadCartesianChart.Series>
         </telerikChart:RadCartesianChart>
 
-        <telerikChart:RadCartesianChart x:Name="secondChart" HorizontalAlignment="Right" Width="700" Height="700" >
+        <telerikChart:RadCartesianChart x:Name="secondChart" Width="700" Height="700" Margin="50,0,0,0"  >
             <telerikChart:RadCartesianChart.VerticalAxis>
                 <telerikChart:LinearAxis/>
             </telerikChart:RadCartesianChart.VerticalAxis>
@@ -72,5 +72,5 @@
                 </telerikChart:MacdhIndicator>
             </telerikChart:RadCartesianChart.Indicators>
         </telerikChart:RadCartesianChart>
-    </Grid>
+    </StackPanel>
 </Page>

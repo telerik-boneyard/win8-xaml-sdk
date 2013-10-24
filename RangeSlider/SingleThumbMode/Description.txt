@@ -1,0 +1,3 @@
+﻿This example demonstrates how to hide the left thumb of a slider and style the middle thumb properly.
+
+In the example there are three sliders used as a color mixer.

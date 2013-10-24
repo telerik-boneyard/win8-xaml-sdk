@@ -10,8 +10,8 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="700"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.DataContext>
             <local:ViewModel/>
@@ -21,6 +21,7 @@
                                  SelectionMode="Single"
                                  HorizontalAlignment="Center"
                                  VerticalAlignment="Center"
+                                 Width="700"
                                  SelectionChanged="RadDataGrid_SelectionChanged_1"/>
         <StackPanel  HorizontalAlignment="Left"
                    VerticalAlignment="Center"

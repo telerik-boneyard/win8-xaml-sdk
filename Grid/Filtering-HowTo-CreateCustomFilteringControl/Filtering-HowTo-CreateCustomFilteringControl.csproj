@@ -104,21 +104,19 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <SDKReference Include="RadControls for Windows 8, Version=2013.2.716">
-      <Name>RadControls for Windows 8</Name>
-    </SDKReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BaseFilterControl.cs" />
-    <Compile Include="ContinentFilterControl.xaml.cs">
-      <DependentUpon>ContinentFilterControl.xaml</DependentUpon>
+    <Compile Include="CheckBoxColor.cs" />
+    <Compile Include="ColorFilter.cs" />
+    <Compile Include="ColorFilterControl.xaml.cs">
+      <DependentUpon>ColorFilterControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ColumnMarker.cs" />
     <Compile Include="CustomFilterButtonTapCommand.cs" />
     <Compile Include="Data.cs" />
+    <Compile Include="EyeColor.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -136,6 +134,7 @@
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Description.txt" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -146,7 +145,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ContinentFilterControl.xaml">
+    <Page Include="ColorFilterControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +153,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1015">
+      <Name>RadControls for Windows 8</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

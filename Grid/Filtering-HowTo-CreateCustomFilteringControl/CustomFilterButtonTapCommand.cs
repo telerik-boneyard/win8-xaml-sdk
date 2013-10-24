@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Telerik.UI.Xaml.Controls.Grid;
 using Telerik.UI.Xaml.Controls.Grid.Commands;
 
 namespace Filtering_HowTo_CreateCustomFilteringControl
@@ -13,25 +9,27 @@ namespace Filtering_HowTo_CreateCustomFilteringControl
         {
             this.Id = CommandId.FilterButtonTap;
         }
+
         public override bool CanExecute(object parameter)
         {
             return true;
         }
+
         public override void Execute(object parameter)
         {
             var context = parameter as FilterButtonTapContext;
-            if (context.Column.Header.ToString() == "Continent")
+            if (ColumnMarker.GetRequiresCustomFiltering(context.Column))
             {
-                context.FirstFilterControl = new ContinentFilterControl() { PropertyName = "IsFromEurope" };
+                context.FirstFilterControl = new ColorFilterControl(context.AssociatedDescriptor as DelegateFilterDescriptor)
+                {
+                    PropertyName = "EyeColor",
+                    DataContext = context.AssociatedDescriptor
+                };
+
                 context.SecondFilterControl = null;
-                this.Owner.CommandService.ExecuteDefaultCommand(CommandId.FilterButtonTap, context);
-            }
-            else
-            {
-                this.Owner.CommandService.ExecuteDefaultCommand(CommandId.FilterButtonTap, context);
-            }
 
-
+            }
+            this.Owner.CommandService.ExecuteDefaultCommand(CommandId.FilterButtonTap, context);
         }
     }
 }

@@ -140,7 +140,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="RadControls for Windows 8, Version=2013.2.716">
+    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1015">
       <Name>RadControls for Windows 8</Name>
     </SDKReference>
   </ItemGroup>

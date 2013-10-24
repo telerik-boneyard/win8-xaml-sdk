@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="AttachOneMenuToManyTargets.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AttachOneMenuToManyTargets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
+    xmlns:telerikRadialMenu="using:Telerik.UI.Xaml.Controls.Primitives.Menu"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <local:CommandProvider x:Key="Commands"/>
+
+        <local:RadialMenuProvider x:Key="MenuProvider">
+            <local:RadialMenuProvider.Menu>
+                <telerikPrimitives:RadRadialMenu InnerNavigationRadiusFactor="0.7">
+                    <telerikPrimitives:RadialMenuItem Header="Foreground" Selectable="False"
+                                                      Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}">
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#EA5E0F" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#DD011B" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#7C2B87" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#49328A" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#03AEE2" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#02A39B" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#B8CB00" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#FFEC01" GroupName="Colors" Command="{Binding SetForegroundCommand, Source={StaticResource Commands}}"/>
+                    </telerikPrimitives:RadialMenuItem>
+
+                    <telerikPrimitives:RadialMenuItem Header="Background" Selectable="False"
+                                                      Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}">
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#EA5E0F" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#DD011B" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#7C2B87" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#49328A" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#03AEE2" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#02A39B" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#B8CB00" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#FFEC01" GroupName="Colors" Command="{Binding SetBackgroundCommand, Source={StaticResource Commands}}"/>
+                    </telerikPrimitives:RadialMenuItem>
+
+                    <telerikPrimitives:RadialMenuItem Header="Border" Selectable="False"
+                                                      Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}">
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#EA5E0F" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#DD011B" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#7C2B87" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#49328A" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#03AEE2" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#02A39B" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#B8CB00" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                        <telerikPrimitives:RadialMenuItem ContentSectorBackground="#FFEC01" GroupName="Colors" Command="{Binding SetBorderColorCommand, Source={StaticResource Commands}}"/>
+                    </telerikPrimitives:RadialMenuItem>
+                </telerikPrimitives:RadRadialMenu>
+            </local:RadialMenuProvider.Menu>
+        </local:RadialMenuProvider>
+    </Page.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel  VerticalAlignment="Center" Width="200">
+            <Border Margin="10" BorderBrush="LightGray" BorderThickness="2"
+                    telerikPrimitives:RadRadialContextMenu.Menu="{Binding Menu, Source={StaticResource MenuProvider}}">
+                <TextBlock Text="Lorem Ipsum" FontSize="20"
+                           VerticalAlignment="Stretch" TextAlignment="Center"/>
+                <telerikPrimitives:RadRadialContextMenu.Behavior>
+                    <telerikPrimitives:RadialMenuTriggerBehavior AttachTriggers="PointerOver"/>
+                </telerikPrimitives:RadRadialContextMenu.Behavior>
+            </Border>
+
+            <Border Margin="10" BorderBrush="LightGray" BorderThickness="2"
+                    telerikPrimitives:RadRadialContextMenu.Menu="{Binding Menu, Source={StaticResource MenuProvider}}">
+                <TextBlock Text="Lorem Ipsum" FontSize="20"
+                           VerticalAlignment="Stretch" TextAlignment="Center"/>
+                <telerikPrimitives:RadRadialContextMenu.Behavior>
+                    <telerikPrimitives:RadialMenuTriggerBehavior AttachTriggers="PointerOver"/>
+                </telerikPrimitives:RadRadialContextMenu.Behavior>
+            </Border>
+
+            <Border Margin="10" BorderBrush="LightGray" BorderThickness="2"
+                    telerikPrimitives:RadRadialContextMenu.Menu="{Binding Menu, Source={StaticResource MenuProvider}}">
+                <TextBlock Text="Lorem Ipsum" FontSize="20"
+                           VerticalAlignment="Stretch" TextAlignment="Center"/>
+                <telerikPrimitives:RadRadialContextMenu.Behavior>
+                    <telerikPrimitives:RadialMenuTriggerBehavior AttachTriggers="PointerOver"/>
+                </telerikPrimitives:RadRadialContextMenu.Behavior>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
