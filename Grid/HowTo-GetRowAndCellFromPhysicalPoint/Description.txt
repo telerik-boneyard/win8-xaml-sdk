@@ -1,0 +1,2 @@
+﻿This example shows how to translate a physical point to a Row Item(business object) and a DataGridCellInfo object.
+As the pointer moves, the two textblocks will show the Row Item and the DataGridCellInfo object that the pointer points(if any).
