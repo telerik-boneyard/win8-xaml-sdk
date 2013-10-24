@@ -18,4 +18,3 @@
         </ListView.ItemTemplate>
     </ListView>
 </local:BaseFilterControl>
-
