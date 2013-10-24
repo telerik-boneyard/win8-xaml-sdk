@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Aggregates_DelegateAggregateDescriptor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aggregates_DelegateAggregateDescriptor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Orientation="Vertical">
+        <telerikGrid:RadDataGrid Width="800" Margin="20"
+                                 ItemsSource="{Binding Employees}" 
+                                 AutoGenerateColumns="True" 
+                                 UserGroupMode="Disabled"
+                                 UserSortMode="None"
+                                 UserColumnReorderMode="None"
+                                 UserEditMode="Inline"
+                                 DataBindingComplete="RadDataGrid_DataBindingComplete">
+            <telerikGrid:RadDataGrid.AggregateDescriptors>
+
+                <telerikGrid:DelegateAggregateDescriptor>
+                    <telerikGrid:DelegateAggregateDescriptor.Function>
+                        <local:TotalSalarySumAggregateFunction/>
+                    </telerikGrid:DelegateAggregateDescriptor.Function>
+                    <telerikGrid:DelegateAggregateDescriptor.ValueLookup>
+                        <local:TotalEmployeeSalaryKeyLookup/>
+                    </telerikGrid:DelegateAggregateDescriptor.ValueLookup>
+                </telerikGrid:DelegateAggregateDescriptor>
+
+                <telerikGrid:DelegateAggregateDescriptor>
+                    <telerikGrid:DelegateAggregateDescriptor.Function>
+                        <local:RegularSalaryDifferenceAggregateFunction/>
+                    </telerikGrid:DelegateAggregateDescriptor.Function>
+                    <telerikGrid:DelegateAggregateDescriptor.ValueLookup>
+                        <local:RegularSalaryKeyLookUp/>
+                    </telerikGrid:DelegateAggregateDescriptor.ValueLookup>
+                </telerikGrid:DelegateAggregateDescriptor>
+
+            </telerikGrid:RadDataGrid.AggregateDescriptors>
+        </telerikGrid:RadDataGrid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Margin="10" FontSize="20">Difference between min and max regular salary:</TextBlock>
+            <TextBlock Margin="10" FontSize="20" Text="{Binding SalaryDifference}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Margin="10" FontSize="20">Total salary sum for all employes:</TextBlock>
+            <TextBlock Margin="10" FontSize="20" Text="{Binding TotalSalary}"/>
+        </StackPanel>
+
+    </StackPanel>
+</Page>

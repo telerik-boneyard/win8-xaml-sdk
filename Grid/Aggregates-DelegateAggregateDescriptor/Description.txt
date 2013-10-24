@@ -1,0 +1,1 @@
+﻿This example shows how to use DelegateAggregateDescriptor when you wish to use custom aggregate functions.
