@@ -8,11 +8,11 @@
     xmlns:telerikPrimitives="using:Telerik.UI.Xaml.Controls.Primitives"
     xmlns:telerikPrimitivesMenu="using:Telerik.UI.Xaml.Controls.Primitives.Menu"
     mc:Ignorable="d">
-    
+
     <Page.DataContext>
         <local:ViewModel/>
     </Page.DataContext>
-    
+
     <Page.Resources>
         <Style TargetType="Border" x:Key="BorderStyle">
             <Setter Property="Width" Value="40"/>
@@ -43,7 +43,7 @@
         <ListView ItemsSource="{Binding Images}" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionMode="None">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapGrid Orientation="Vertical" MaximumRowsOrColumns="3" />
+                    <WrapGrid Orientation="Vertical" MaximumRowsOrColumns="2"/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
@@ -56,7 +56,7 @@
                                         <Setter Property="Background" Value="Transparent"/>
                                     </Style>
                                 </telerikPrimitives:RadRadialMenu.Resources>
-                                
+
                                 <telerikPrimitives:RadialMenuItem Selectable="False">
                                     <telerikPrimitives:RadialMenuItem.IconContent>
                                         <Border Style="{StaticResource BorderStyle}">
@@ -80,7 +80,7 @@
                                         </Border>
                                     </telerikPrimitives:RadialMenuItem.IconContent>
                                 </telerikPrimitives:RadialMenuItem>
-                                
+
                                 <telerikPrimitives:RadialMenuItem Selectable="False">
                                     <telerikPrimitives:RadialMenuItem.IconContent>
                                         <Border Style="{StaticResource BorderStyle}">
@@ -88,7 +88,7 @@
                                         </Border>
                                     </telerikPrimitives:RadialMenuItem.IconContent>
                                 </telerikPrimitives:RadialMenuItem>
-                                
+
                                 <telerikPrimitives:RadialMenuItem Selectable="False">
                                     <telerikPrimitives:RadialMenuItem.IconContent>
                                         <Border Style="{StaticResource BorderStyle}">
@@ -98,7 +98,7 @@
                                 </telerikPrimitives:RadialMenuItem>
                             </telerikPrimitives:RadRadialMenu>
                         </telerikPrimitives:RadRadialContextMenu.Menu>
-                        
+
                         <telerikPrimitives:RadRadialContextMenu.Behavior>
                             <local:CustomPositionTriggerBehavior/>
                         </telerikPrimitives:RadRadialContextMenu.Behavior>

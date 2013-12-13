@@ -8,8 +8,8 @@
     xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
     xmlns:gridPrimitives="using:Telerik.UI.Xaml.Controls.Grid.Primitives"
     mc:Ignorable="d">
+
     <Page.Resources>
-          
         <local:CustomStyleSelector x:Key="StyleSelector">
             <local:CustomStyleSelector.ExpandedStyle>
                 <Style TargetType="gridPrimitives:DataGridGroupHeader">
@@ -22,32 +22,33 @@
                 </Style>
             </local:CustomStyleSelector.CollapsedStyle>
         </local:CustomStyleSelector>
-
         <local:CustomDataTemplateSelector x:Key="TemplateSelector">
             <local:CustomDataTemplateSelector.ExpandedTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Group.Key}" Foreground="#21A6FF" 
-                       FontStyle="Italic" 
-                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                               FontStyle="Italic" 
+                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </DataTemplate>
             </local:CustomDataTemplateSelector.ExpandedTemplate>
             <local:CustomDataTemplateSelector.CollapsedTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Group.Key}" Foreground="#FFDE5B" 
-                       FontStyle="Italic" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                               FontStyle="Italic" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </DataTemplate>
             </local:CustomDataTemplateSelector.CollapsedTemplate>
         </local:CustomDataTemplateSelector>
-
     </Page.Resources>
+
+    <Page.DataContext>
+        <local:ViewModel/>
+    </Page.DataContext>
+
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <telerikGrid:RadDataGrid x:Name="grid" ItemsSource="{Binding GridSource}"
-                  GroupHeaderTemplateSelector="{StaticResource TemplateSelector}"
-                  GroupHeaderStyleSelector="{StaticResource StyleSelector}">
-            <telerikGrid:RadDataGrid.DataContext>
-                <local:ViewModel/>
-            </telerikGrid:RadDataGrid.DataContext>
+        <telerikGrid:RadDataGrid x:Name="grid"  ItemsSource="{Binding GridSource}"
+                                 GroupHeaderTemplateSelector="{StaticResource TemplateSelector}"
+                                 GroupHeaderStyleSelector="{StaticResource StyleSelector}">
+
             <telerikGrid:RadDataGrid.GroupDescriptors>
                 <telerikGrid:PropertyGroupDescriptor PropertyName="Country"/>
             </telerikGrid:RadDataGrid.GroupDescriptors>

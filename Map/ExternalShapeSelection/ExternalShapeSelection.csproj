@@ -152,7 +152,7 @@
     <SDKReference Include="Microsoft.VCLibs, version=12.0">
       <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
     </SDKReference>
-    <SDKReference Include="RadControls for Windows 8, version=2013.3.1105">
+    <SDKReference Include="RadControls for Windows 8.1 XAML, Version=2013.3.1105">
       <Name>RadControls for Windows 8.1</Name>
     </SDKReference>
     <SDKReference Include="RadMap for Windows 8.1 XAML, Version=2013.3.1105">

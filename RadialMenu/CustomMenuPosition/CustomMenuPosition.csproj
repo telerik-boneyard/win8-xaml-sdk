@@ -133,13 +133,6 @@
     <Content Include="Images\2.png" />
     <Content Include="Images\3.png" />
     <Content Include="Images\4.png" />
-    <Content Include="Images\5.png" />
-    <Content Include="Images\6.png" />
-    <Content Include="Images\7.png" />
-    <Content Include="Images\8.png" />
-    <Content Include="Images\9.png" />
-    <Content Include="Images\10.png" />
-    <Content Include="Images\11.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -156,8 +149,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1105">
-      <Name>RadControls for Windows 8</Name>
+    <SDKReference Include="RadControls for Windows 8.1 XAML, Version=2013.3.1105">
+      <Name>RadControls for Windows 8.1</Name>
     </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
