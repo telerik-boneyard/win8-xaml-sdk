@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoricalSeries-GettingStarted", "CategoricalSeries-GettingStarted\CategoricalSeries-GettingStarted.csproj", "{046DADCC-1414-4F26-BBC9-D02F4A793767}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScatterSeries-GettingStarted", "ScatterSeries-GettingStarted\ScatterSeries-GettingStarted.csproj", "{396F9B02-F51D-42B6-897A-2D99D5FA4431}"

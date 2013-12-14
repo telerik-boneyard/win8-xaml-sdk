@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands-CellDoubleTappedCommand", "Commands-CellDoubleTappedCommand\Commands-CellDoubleTappedCommand.csproj", "{06737403-AE97-4EA3-B827-28D3D49389E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands-GenerateColumnCommand", "Commands-GenerateColumnCommand\Commands-GenerateColumnCommand.csproj", "{D38F68A2-3F3D-4959-9CDB-E094C42007C0}"
