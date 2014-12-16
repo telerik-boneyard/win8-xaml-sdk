@@ -1,0 +1,1 @@
+C:\Work\ExpanderControl\ExpanderControl\ExpanderControl.Windows\ExpanderControl.Windows.csproj;neutral

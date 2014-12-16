@@ -1,0 +1,8 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\work\expandercontrol\expandercontrol\expandercontrol.windows\obj\debug\intermediatexaml\expandercontrol.windows.exe" HashGuid="4841f3e8-4f4a-4021-4190-c5abab36ebec" />
+    <ReferenceAssembly PathName="c:\work\expandercontrol\packages\newtonsoft.json.6.0.6\lib\netcore45\newtonsoft.json.dll" HashGuid="63116148-54c9-33e9-c28b-753c429e654f" />
+    <ReferenceAssembly PathName="c:\work\telerik_ui_for_windowsuniversal_2014.3.1203.45_dev_hotfix\binaries\windows 8.1\telerik.core.dll" HashGuid="b53f27a6-c27e-7769-09e7-188c508fc82b" />
+    <ReferenceAssembly PathName="c:\work\telerik_ui_for_windowsuniversal_2014.3.1203.45_dev_hotfix\binaries\windows 8.1\telerik.ui.xaml.primitives.dll" HashGuid="42952390-ea0b-9e18-960f-81e180ab3ab0" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

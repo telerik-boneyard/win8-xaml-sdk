@@ -1,0 +1,7 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\work\expandercontrol\expandercontrol\expandercontrol.windowsphone\obj\release\intermediatexaml\expandercontrol.windowsphone.exe" HashGuid="c01c9ded-b241-7b81-c33a-3bce74ed2c6c" />
+    <ReferenceAssembly PathName="c:\work\telerik_ui_for_windowsuniversal_2014.3.1203.45_dev_hotfix\binaries\windows phone 8.1\telerik.core.dll" HashGuid="858d26d8-4265-b23a-35f0-d39705fc954d" />
+    <ReferenceAssembly PathName="c:\work\telerik_ui_for_windowsuniversal_2014.3.1203.45_dev_hotfix\binaries\windows phone 8.1\telerik.ui.xaml.primitives.dll" HashGuid="7b9184dc-fb61-3d46-7cb3-485bcf0e4900" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
