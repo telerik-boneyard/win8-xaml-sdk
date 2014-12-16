@@ -1,1 +1,0 @@
-C:\Work\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\ExpanderControl.WindowsPhone.csproj;neutral
