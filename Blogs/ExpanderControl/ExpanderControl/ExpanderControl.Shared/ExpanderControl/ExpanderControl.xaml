@@ -10,7 +10,6 @@
 		<Setter Property="HorizontalContentAlignment" Value="Stretch" />
 		<Setter Property="Foreground" Value="White" />
 		<Setter Property="FontWeight" Value="Normal" />
-		<Setter Property="FontSize" Value="20" />
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="ToggleButton">

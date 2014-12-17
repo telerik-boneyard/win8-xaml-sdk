@@ -15,17 +15,17 @@ namespace ExpanderControl.Parser
 		{
 
 		}
-		async public static Task<Dictionary<string, string>> GetMap()
+		async public static Task<List<Season>> GetMap()
 		{
 			JObject obj = await GetJson(jsonUrl);
-			Dictionary<string, string> map = new Dictionary<string, string>();
+			List<Season> map = new List<Season>();
 
 			for (int row = 0; row < obj["table"]["rows"].Count(); row++)
 			{
 				string start = obj["table"]["rows"][row]["c"][0]["v"].ToString();
 				string end = obj["table"]["rows"][row]["c"][1]["v"].ToString();
 				string json = obj["table"]["rows"][row]["c"][2]["v"].ToString();
-				map.Add(string.Concat(start,"-",end), json);
+				map.Add(new Season(start, end, json));
 			}
 
 			return map;

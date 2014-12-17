@@ -10,18 +10,15 @@ namespace ExpanderControl.Parser
 {
 	public class YearTableParser : GoogleSpreadsheetParser
 	{
-		private string json;
-		private string start, end;
-		public YearTableParser(string season, string json)
+		private Season season;
+
+		public YearTableParser(Season season)
 		{
-			this.json = json;
-			string[] s = season.Split('-');
-			this.start = s[0];
-			this.end = s[1];
+			this.season = season;
 		}
 		async public Task<List<Team>> GetAllTeams()
 		{
-			JObject obj = await GetJson(json);
+			JObject obj = await GetJson(season.Json);
 			List<Team> teams = new List<Team>();
 
 			for (int row = 0; row < obj["table"]["rows"].Count(); row++)
@@ -35,11 +32,16 @@ namespace ExpanderControl.Parser
 				string received = obj["table"]["rows"][row]["c"][7]["v"].ToString();
 				string points = obj["table"]["rows"][row]["c"][19]["v"].ToString();
 
-				Team newTeam = new Team(int.Parse(position), name, int.Parse(wins), int.Parse(draws), int.Parse(losses), int.Parse(scored), int.Parse(received), int.Parse(points), start, end);
+				Team newTeam = new Team(int.Parse(position), name, int.Parse(wins), int.Parse(draws), int.Parse(losses), int.Parse(scored), int.Parse(received), int.Parse(points), season.Start, season.End);
 				teams.Add(newTeam);
 			}
 
 			return teams;
+		}
+
+		async public Task<List<Match>> GetAllMatches()
+		{
+			return await new MatchParser().GetMatches(season.Start, season.End);
 		}
 	}
 }

@@ -8,6 +8,15 @@ namespace ExpanderControl.ViewModel
 {
 	public class Team : INotifyPropertyChanged
 	{
+		public Team(string name, int wins, int draws, int losses, int scored, int received)
+		{
+			this.Name = name;
+			this.Wins = wins;
+			this.Draws = draws;
+			this.Losses = losses;
+			this.Scored = scored;
+			this.Received = received;
+		}
 		public Team(int position, string name, int wins, int draws, int losses, int scored, int received, int points, string seasonStart, string seasonEnd)
 		{
 			this.Position = position;

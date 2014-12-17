@@ -7,33 +7,30 @@
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
-			<local:ExpanderControl x:Name="seasonsExpander" Header="Which season would you like to see?"
-					IsExpandedChanged="ExpanderControl_IsExpandedChanged" FontSize="16" VerticalContentAlignment="Center">
-				<local:ExpanderControl.Content>
-					<telerik:RadDataBoundListBox x:Name="seasonsListBox" DisplayMemberPath="Key" MaxHeight="200" FontSize="14"
-							SelectionChanged="seasonsListBox_SelectionChanged">
-						<telerik:RadDataBoundListBox.EmptyContent>
-							<Grid>
-								<TextBlock Text="Fetching data..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" />
-							</Grid>
-						</telerik:RadDataBoundListBox.EmptyContent>
-					</telerik:RadDataBoundListBox>
-				</local:ExpanderControl.Content>
-			</local:ExpanderControl>
+			<ComboBox x:Name="seasons" Header="Select season" SelectionChanged="seasons_SelectionChanged" DropDownOpened="seasons_DropDownOpened">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Foreground="Black">
+						<Run Text="{Binding Start}" />
+						<Run Text="-" />
+						<Run Text="{Binding End}" /></TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
 			<telerik:RadDataBoundListBox x:Name="telerikListBox" Grid.Row="1" EmptyContentDisplayMode="DataSourceNull">
 				<telerik:RadDataBoundListBox.ItemTemplate>
 					<DataTemplate>
-						<local:ExpanderControl Background="#F8CBAD" Foreground="Black" IsExpandedChanged="ExpanderControl_IsExpandedChanged_1">
+						<local:ExpanderControl IsExpandedChanged="TeamExpander_IsExpandedChanged">
 							<local:ExpanderControl.HeaderContentTemplate>
 								<DataTemplate>
 									<Grid VerticalAlignment="Center">
-										<TextBlock FontSize="20" Text="{Binding Name}" />
+										<TextBlock Text="{Binding Name}" />
 									</Grid>
 								</DataTemplate>
 							</local:ExpanderControl.HeaderContentTemplate>
 							<local:ExpanderControl.ContentTemplate>
 								<DataTemplate>
-									<Grid Background="#FCE4D6">
+									<Grid>
 										<Grid.RowDefinitions>
 											<RowDefinition Height="Auto" />
 											<RowDefinition Height="Auto" />
@@ -52,20 +49,20 @@
 												<RowDefinition Height="Auto" />
 												<RowDefinition Height="Auto" />
 											</Grid.RowDefinitions>
-											<TextBlock FontSize="16" Text="Position" Grid.Row="0" Grid.Column="0" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Position}" Grid.Row="1" Grid.Column="0" Margin="10" />
-											<TextBlock FontSize="16" Text="Wins" Grid.Row="0" Grid.Column="1" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Wins}" Grid.Row="1" Grid.Column="1" Margin="10" />
-											<TextBlock FontSize="16" Text="Draws" Grid.Row="0" Grid.Column="2" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Draws}" Grid.Row="1" Grid.Column="2" Margin="10" />
-											<TextBlock FontSize="16" Text="Losses" Grid.Row="0" Grid.Column="3" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Losses}" Grid.Row="1" Grid.Column="3" Margin="10" />
-											<TextBlock FontSize="16" Text="Scored" Grid.Row="0" Grid.Column="4" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Scored}" Grid.Row="1" Grid.Column="4" Margin="10" />
-											<TextBlock FontSize="16" Text="Received" Grid.Row="0" Grid.Column="5" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Received}" Grid.Row="1" Grid.Column="5" Margin="10" />
-											<TextBlock FontSize="16" Text="Points" Grid.Row="0" Grid.Column="6" Margin="10" />
-											<TextBlock FontSize="16" Text="{Binding Points}" Grid.Row="1" Grid.Column="6" Margin="10" />
+											<TextBlock Text="Position" Grid.Row="0" Grid.Column="0" Margin="10" />
+											<TextBlock Text="{Binding Position}" Grid.Row="1" Grid.Column="0" Margin="10" />
+											<TextBlock Text="Wins" Grid.Row="0" Grid.Column="1" Margin="10" />
+											<TextBlock Text="{Binding Wins}" Grid.Row="1" Grid.Column="1" Margin="10" />
+											<TextBlock Text="Draws" Grid.Row="0" Grid.Column="2" Margin="10" />
+											<TextBlock Text="{Binding Draws}" Grid.Row="1" Grid.Column="2" Margin="10" />
+											<TextBlock Text="Losses" Grid.Row="0" Grid.Column="3" Margin="10" />
+											<TextBlock Text="{Binding Losses}" Grid.Row="1" Grid.Column="3" Margin="10" />
+											<TextBlock Text="Scored" Grid.Row="0" Grid.Column="4" Margin="10" />
+											<TextBlock Text="{Binding Scored}" Grid.Row="1" Grid.Column="4" Margin="10" />
+											<TextBlock Text="Received" Grid.Row="0" Grid.Column="5" Margin="10" />
+											<TextBlock Text="{Binding Received}" Grid.Row="1" Grid.Column="5" Margin="10" />
+											<TextBlock Text="Points" Grid.Row="0" Grid.Column="6" Margin="10" />
+											<TextBlock Text="{Binding Points}" Grid.Row="1" Grid.Column="6" Margin="10" />
 										</Grid>
 										<telerik:RadDataBoundListBox ItemsSource="{Binding Matches, Mode=TwoWay}" Grid.Row="1">
 											<telerik:RadDataBoundListBox.ItemTemplate>
