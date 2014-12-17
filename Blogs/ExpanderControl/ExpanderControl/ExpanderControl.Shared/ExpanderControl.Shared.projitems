@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ExpanderControl\BooleanToVisibilityConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExpanderControl\ExpanderControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\JsonMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Match.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Team.cs" />
   </ItemGroup>
   <ItemGroup>
