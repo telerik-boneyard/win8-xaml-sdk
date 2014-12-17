@@ -9,23 +9,33 @@ using Windows.UI.Xaml.Controls;
 
 namespace ExpanderControl
 {
+
 	public sealed partial class MainPage : Page
 	{
-		List<Season> map = null;
+		private MainViewModel viewModel = new MainViewModel();
 
 		public MainPage()
 		{
 			this.InitializeComponent();
-			this.telerikListBox.ItemsSource = new List<Team>();
+			this.DataContext = this.viewModel;
 		}
 
 		async private void TeamExpander_IsExpandedChanged(object sender, EventArgs e)
 		{
-			Team team = (Team)(sender as ExpanderControl).DataContext;
+			var team = (Team)(sender as ExpanderControl).DataContext;
+			var season = this.viewModel.SelectedSeason;
+			team.Matches = await FootballParser.GetMatches(season, team);
+			foreach (var match in team.Matches)
+			{
+				if (match.HomeTeam.Equals(team))
+					match.HomeTeam.IsOfInterest = true;
+				if (match.AwayTeam.Equals(team))
+					match.AwayTeam.IsOfInterest = true;
 
-			var allMatches = await new MatchParser().GetMatches(team.SeasonStart, team.SeasonEnd);
+			}
+			//var allMatches = await new MatchParser().GetMatches(team.SeasonStart, team.SeasonEnd);
 
-			var engine = new PositionEngine(allMatches, team);
+			//var engine = new PositionEngine(allMatches, team);
 
 			//var teamMatches = allMatches.Where(match => match.HomeTeam.Contains(team.Name) || match.AwayTeam.Contains(team.Name)).ToList();
 
@@ -33,29 +43,35 @@ namespace ExpanderControl
 			//team.Matches = teamMatches;
 		}
 
-		async private void seasons_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		async private void SelectionChanged_Seasons(object sender, SelectionChangedEventArgs e)
 		{
-			this.seasons.IsDropDownOpen = false;
-			this.seasons.IsEnabled = false;
+			var selectedSeason = (Season)e.AddedItems[0];
+			this.viewModel.SelectedSeason = selectedSeason;
+			selectedSeason.Teams = await FootballParser.GetTeams(selectedSeason);
 
-			var season = (Season)e.AddedItems[0];
-			telerikListBox.ItemsSource = null;
-			telerikListBox.EmptyContent = "Fetching data...";
+			//this.seasons.IsDropDownOpen = false;
+			//this.seasons.IsEnabled = false;
 
-			telerikListBox.ItemsSource = await new YearTableParser(season).GetAllTeams();
+			//telerikListBox.ItemsSource = null;
+			//telerikListBox.EmptyContent = "Fetching data...";
 
-			this.seasons.IsEnabled = true;
+			//telerikListBox.ItemsSource = await new FootballParser(season).GetAllTeams();
+
+			//this.seasons.IsEnabled = true;
 		}
 
-		async private void seasons_DropDownOpened(object sender, object e)
+		async private void DropDownOpened_Seasons(object sender, object e)
 		{
-			if (this.map == null)
+
+		}
+
+		async private void Button_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+		{
+			if (this.viewModel.Seasons == null)
 			{
-				this.seasons.IsEnabled = false;
-				this.map = await UrlMapParser.GetMap();
-				this.seasons.ItemsSource = this.map;
-				this.seasons.IsEnabled = true;
-				this.seasons.IsDropDownOpen = true;
+				this.comboSeasons.Header = "Downloading map";
+				this.viewModel.Seasons = await FootballParser.GetSeasons();
+				this.comboSeasons.Header = "Download complete";
 			}
 		}
 	}
@@ -76,6 +92,11 @@ namespace ExpanderControl
 
 			//}
 
+
+			foreach (var match in seasonMatches)
+			{
+
+			}
 
 		}
 	}

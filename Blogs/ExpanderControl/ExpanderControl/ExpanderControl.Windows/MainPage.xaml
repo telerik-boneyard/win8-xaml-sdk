@@ -7,17 +7,25 @@
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
-			<ComboBox x:Name="seasons" Header="Select season" SelectionChanged="seasons_SelectionChanged" DropDownOpened="seasons_DropDownOpened">
-				<ComboBox.ItemTemplate>
-					<DataTemplate>
-						<TextBlock Foreground="Black">
+			<StackPanel>
+				<Button Content="Download map" Tapped="Button_Tapped" />
+				<ComboBox x:Name="comboSeasons" Header="Map not downloaded. Tap the Download button." SelectionChanged="SelectionChanged_Seasons"
+						DropDownOpened="DropDownOpened_Seasons" ItemsSource="{Binding Seasons}" SelectedItem="{Binding SelectedSeason, Mode=TwoWay}">
+					<ComboBox.ItemTemplate>
+						<DataTemplate>
+							<TextBlock Foreground="Black">
 						<Run Text="{Binding Start}" />
 						<Run Text="-" />
 						<Run Text="{Binding End}" /></TextBlock>
-					</DataTemplate>
-				</ComboBox.ItemTemplate>
-			</ComboBox>
-			<telerik:RadDataBoundListBox x:Name="telerikListBox" Grid.Row="1" EmptyContentDisplayMode="DataSourceNull">
+						</DataTemplate>
+					</ComboBox.ItemTemplate>
+				</ComboBox>
+			</StackPanel>
+			<telerik:RadDataBoundListBox x:Name="telerikListBox" ItemsSource="{Binding SelectedSeason.Teams, Mode=TwoWay}" Grid.Row="1"
+					EmptyContentDisplayMode="DataSourceNull">
+				<telerik:RadDataBoundListBox.Resources>
+					<local:BooleanToFontWeightConverter x:Key="converter" />
+				</telerik:RadDataBoundListBox.Resources>
 				<telerik:RadDataBoundListBox.ItemTemplate>
 					<DataTemplate>
 						<local:ExpanderControl IsExpandedChanged="TeamExpander_IsExpandedChanged">
@@ -64,7 +72,7 @@
 											<TextBlock Text="Points" Grid.Row="0" Grid.Column="6" Margin="10" />
 											<TextBlock Text="{Binding Points}" Grid.Row="1" Grid.Column="6" Margin="10" />
 										</Grid>
-										<telerik:RadDataBoundListBox ItemsSource="{Binding Matches, Mode=TwoWay}" Grid.Row="1">
+										<telerik:RadDataBoundListBox ItemsSource="{Binding Matches}" Grid.Row="1">
 											<telerik:RadDataBoundListBox.ItemTemplate>
 												<DataTemplate>
 													<Grid>
@@ -80,12 +88,16 @@
 														<Run Text="{Binding Month}" />
 														<Run Text="-" />
 														<Run Text="{Binding Year}" /></TextBlock>
-														<TextBlock Text="{Binding HomeTeam}" Grid.Column="1" HorizontalAlignment="Left" />
+														<TextBlock Text="{Binding HomeTeam.Name}"
+																FontWeight="{Binding HomeTeam.IsOfInterest, Converter={StaticResource converter}}"
+																Grid.Column="1" HorizontalAlignment="Left" />
 														<TextBlock Grid.Column="2" HorizontalAlignment="Left">
 														<Run Text="{Binding HomeScore}" />
 														<Run Text="-" />
 														<Run Text="{Binding AwayScore}" /></TextBlock>
-														<TextBlock Text="{Binding AwayTeam}" Grid.Column="3" HorizontalAlignment="Left" />
+														<TextBlock Text="{Binding AwayTeam.Name}"
+																FontWeight="{Binding AwayTeam.IsOfInterest, Converter={StaticResource converter}}"
+																Grid.Column="3" HorizontalAlignment="Left" />
 													</Grid>
 												</DataTemplate>
 											</telerik:RadDataBoundListBox.ItemTemplate>
