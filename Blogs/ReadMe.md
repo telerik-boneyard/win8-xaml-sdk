@@ -1,1 +1,1 @@
-asd
+This repository contains projects that have been referenced in [http://blogs.telerik.com/windowsuniversal/posts](http://blogs.telerik.com/windowsuniversal/posts "http://blogs.telerik.com/windowsuniversal/posts")

@@ -1,1 +1,0 @@
-C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\ExpanderControl.WindowsPhone.csproj;neutral
