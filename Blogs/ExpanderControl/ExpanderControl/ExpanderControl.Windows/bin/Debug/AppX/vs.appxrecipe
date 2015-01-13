@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-13T12:38:58.866</Modified>
+      <Modified>2015-01-13T12:44:06.563</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\ExpanderControl.Windows.exe">
       <PackagePath>ExpanderControl.Windows.exe</PackagePath>
-      <Modified>2015-01-13T12:38:58.610</Modified>
+      <Modified>2015-01-13T12:44:06.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.Core.dll">
       <PackagePath>Telerik.Core.dll</PackagePath>
@@ -94,15 +94,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-01-13T12:38:58.385</Modified>
+      <Modified>2015-01-13T12:44:06.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\ExpanderControl\ExpanderControl.xbf">
       <PackagePath>ExpanderControl\ExpanderControl.xbf</PackagePath>
-      <Modified>2015-01-13T12:38:58.386</Modified>
+      <Modified>2015-01-13T12:44:06.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-01-13T12:38:58.386</Modified>
+      <Modified>2015-01-13T12:44:06.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\ExpanderControl.Windows.xr.xml">
       <PackagePath>ExpanderControl.Windows.xr.xml</PackagePath>
@@ -178,7 +178,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-01-13T12:38:58.747</Modified>
+      <Modified>2015-01-13T12:44:06.453</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
