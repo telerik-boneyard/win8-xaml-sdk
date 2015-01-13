@@ -103,12 +103,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BooleanToFontWeightConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Parser\FootballParser.cs" />
-    <Compile Include="Parser\GoogleSpreadsheetParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,13 +113,21 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="ExpanderControl.Windows_TemporaryKey.pfx" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\8.jpg" />
+    <Content Include="Images\9.jpg" />
+    <Content Include="Images\1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml">
@@ -131,14 +136,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.Core">
-      <HintPath>..\..\..\..\..\Telerik_UI_for_WindowsUniversal_2014.3.1203.45_Dev_hotfix\Binaries\Windows 8.1\Telerik.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\_binaries\Windows 8.1\Telerik.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Primitives">
-      <HintPath>..\..\..\..\..\Telerik_UI_for_WindowsUniversal_2014.3.1203.45_Dev_hotfix\Binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

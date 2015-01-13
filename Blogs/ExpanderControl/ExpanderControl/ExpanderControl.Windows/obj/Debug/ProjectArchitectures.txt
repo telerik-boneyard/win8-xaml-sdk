@@ -1,0 +1,1 @@
+C:\Work\GitHub\win8-xaml-sdk\Blogs\ExpanderControl\ExpanderControl\ExpanderControl.Windows\ExpanderControl.Windows.csproj;neutral

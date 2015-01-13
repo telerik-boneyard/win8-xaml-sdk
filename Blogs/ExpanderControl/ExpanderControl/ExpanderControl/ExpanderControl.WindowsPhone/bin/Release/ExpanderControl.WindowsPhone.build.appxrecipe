@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KSTANOEV</Machine>
+    <WindowsUser>kstanoev</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>29d43507-cc5d-4537-abe7-3495a3b74ae5</PackageIdentityName>
+    <IntermediateOutputPath>C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\obj\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\ExpanderControl.WindowsPhone.exe">
+      <PackagePath>ExpanderControl.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\1.jpg">
+      <PackagePath>Images\1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\2.jpg">
+      <PackagePath>Images\2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\3.jpg">
+      <PackagePath>Images\3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\4.jpg">
+      <PackagePath>Images\4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\5.jpg">
+      <PackagePath>Images\5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\6.jpg">
+      <PackagePath>Images\6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\7.jpg">
+      <PackagePath>Images\7.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\8.jpg">
+      <PackagePath>Images\8.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\Images\9.jpg">
+      <PackagePath>Images\9.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\ExpanderControl\ExpanderControl.xbf">
+      <PackagePath>ExpanderControl\ExpanderControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\ExpanderControl.WindowsPhone.xr.xml">
+      <PackagePath>ExpanderControl.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Telerik.UI.Xaml.Primitives.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Telerik.UI.Xaml.Primitives.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ListBox.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ListBox.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ListBox.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ListBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Resources.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\Resources.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Resources.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.WindowsPhone\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

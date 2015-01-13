@@ -1,0 +1,58 @@
+﻿<Page x:Class="ExpanderControl.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:ExpanderControl"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" xmlns:telerik="using:Telerik.UI.Xaml.Controls.Primitives">
+	<Grid>
+		<telerik:RadDataBoundListBox x:Name="listBox1">
+			<telerik:RadDataBoundListBox.ItemTemplate>
+				<DataTemplate>
+					<local:ExpanderControl VerticalContentAlignment="Center" BorderBrush="Gray">
+						<local:ExpanderControl.Header>
+							<StackPanel Orientation="Horizontal">
+								<Image Source="{Binding ImageUrl}" Stretch="Fill" Width="70" Height="70" Margin="0 10 10 10" />
+								<TextBlock Text="{Binding Text}" FontSize="18" Margin="10 0" VerticalAlignment="Center" />
+							</StackPanel>
+						</local:ExpanderControl.Header>
+						<local:ExpanderControl.Content>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition />
+									<ColumnDefinition />
+									<ColumnDefinition />
+									<ColumnDefinition />
+									<ColumnDefinition />
+								</Grid.ColumnDefinitions>
+								<Button BorderThickness="0" ToolTipService.ToolTip="Add to favorites" Grid.Column="0" HorizontalAlignment="Center">
+									<Button.Content>
+										<TextBlock Text="&#xE1F8;" FontFamily="Segoe UI Symbol" FontSize="18" />
+									</Button.Content>
+								</Button>
+								<Button BorderThickness="0" ToolTipService.ToolTip="Upvote" Grid.Column="1" HorizontalAlignment="Center">
+									<Button.Content>
+										<TextBlock Text="&#xE19F;" FontFamily="Segoe UI Symbol" FontSize="18" />
+									</Button.Content>
+								</Button>
+								<Button BorderThickness="0" ToolTipService.ToolTip="Downvote" Grid.Column="2" HorizontalAlignment="Center">
+									<Button.Content>
+										<TextBlock Text="&#xE19E;" FontFamily="Segoe UI Symbol" FontSize="18" />
+									</Button.Content>
+								</Button>
+								<Button BorderThickness="0" ToolTipService.ToolTip="Download image" Grid.Column="3" HorizontalAlignment="Center">
+									<Button.Content>
+										<TextBlock Text="&#xE118;" FontFamily="Segoe UI Symbol" FontSize="18" />
+									</Button.Content>
+								</Button>
+								<Button BorderThickness="0" ToolTipService.ToolTip="Send direct message" Grid.Column="4" HorizontalAlignment="Center">
+									<Button.Content>
+										<TextBlock Text="&#xE120;" FontFamily="Segoe UI Symbol" FontSize="18" />
+									</Button.Content>
+								</Button>
+							</Grid>
+						</local:ExpanderControl.Content>
+					</local:ExpanderControl>
+				</DataTemplate>
+			</telerik:RadDataBoundListBox.ItemTemplate>
+		</telerik:RadDataBoundListBox>
+	</Grid>
+</Page>
+

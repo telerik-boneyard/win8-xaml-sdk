@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KSTANOEV</Machine>
+    <WindowsUser>kstanoev</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>588e9eca-734f-4f69-b4f2-9e7a13083bc9</PackageIdentityName>
+    <IntermediateOutputPath>C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>748D3936D749271AF552AFD60C7FFF70AA3BD1222907A7055061B8025C8EBFE2</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>588e9eca-734f-4f69-b4f2-9e7a13083bc9_1.0.0.0_neutral__1fkxsxh0xbvj4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>588e9eca-734f-4f69-b4f2-9e7a13083bc9_1fkxsxh0xbvj4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>588e9eca-734f-4f69-b4f2-9e7a13083bc9</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=sirakova</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-13T12:22:15.320</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\ExpanderControl.Windows.exe">
+      <PackagePath>ExpanderControl.Windows.exe</PackagePath>
+      <Modified>2015-01-13T12:30:33.629</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+      <Modified>2014-12-03T13:58:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+      <Modified>2014-12-03T13:59:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T18:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T18:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T18:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T18:06:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\2.jpg">
+      <PackagePath>Images\2.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:03.879</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\3.jpg">
+      <PackagePath>Images\3.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:04.239</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\4.jpg">
+      <PackagePath>Images\4.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:04.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\5.jpg">
+      <PackagePath>Images\5.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:04.608</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\6.jpg">
+      <PackagePath>Images\6.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:04.792</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\7.jpg">
+      <PackagePath>Images\7.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:04.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\8.jpg">
+      <PackagePath>Images\8.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:05.137</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\9.jpg">
+      <PackagePath>Images\9.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:05.320</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\Images\1.jpg">
+      <PackagePath>Images\1.jpg</PackagePath>
+      <Modified>2015-01-13T12:22:03.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-12-15T11:40:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\ExpanderControl\ExpanderControl.xbf">
+      <PackagePath>ExpanderControl\ExpanderControl.xbf</PackagePath>
+      <Modified>2015-01-13T12:22:14.911</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-01-13T12:30:33.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\ExpanderControl.Windows.xr.xml">
+      <PackagePath>ExpanderControl.Windows.xr.xml</PackagePath>
+      <Modified>2015-01-13T12:21:27.543</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Telerik.UI.Xaml.Primitives.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Telerik.UI.Xaml.Primitives.xr.xml</PackagePath>
+      <Modified>2014-12-03T13:52:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Listbox.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Listbox.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Listbox.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Listbox.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Resources.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Resources.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Resources.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\ExpanderControl_Didi\ExpanderControl\ExpanderControl\ExpanderControl.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-01-13T12:22:15.195</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
