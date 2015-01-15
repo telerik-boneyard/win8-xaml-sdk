@@ -135,14 +135,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Telerik.Core">
-      <HintPath>..\..\..\..\..\..\_binaries\Windows 8.1\Telerik.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Primitives">
-      <HintPath>..\..\..\..\..\..\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

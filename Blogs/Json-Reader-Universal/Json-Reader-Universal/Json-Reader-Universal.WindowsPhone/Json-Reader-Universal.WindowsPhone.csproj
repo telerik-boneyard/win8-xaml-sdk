@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECE56803-6B35-4EA3-8745-ABD5425DDEAE}</ProjectGuid>
+    <ProjectGuid>{1339ED0A-B8DF-44A9-B9A8-B842028FB5F9}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExpanderControl</RootNamespace>
-    <AssemblyName>ExpanderControl.WindowsPhone</AssemblyName>
+    <RootNamespace>Json_Reader_Universal</RootNamespace>
+    <AssemblyName>Json-Reader-Universal.WindowsPhone</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
@@ -80,6 +80,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Json\DownloadWebpageTask.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -97,15 +98,6 @@
     <Content Include="Assets\Square71x71Logo.scale-240.png" />
     <Content Include="Assets\StoreLogo.scale-240.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
-    <Content Include="Images\1.jpg" />
-    <Content Include="Images\2.jpg" />
-    <Content Include="Images\3.jpg" />
-    <Content Include="Images\4.jpg" />
-    <Content Include="Images\5.jpg" />
-    <Content Include="Images\6.jpg" />
-    <Content Include="Images\7.jpg" />
-    <Content Include="Images\8.jpg" />
-    <Content Include="Images\9.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml">
@@ -113,13 +105,21 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
   </PropertyGroup>
-  <Import Project="..\ExpanderControl.Shared\ExpanderControl.Shared.projitems" Label="Shared" />
+  <Import Project="..\Json-Reader-Universal.Shared\Json-Reader-Universal.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

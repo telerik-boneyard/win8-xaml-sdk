@@ -1,0 +1,34 @@
+﻿<Page x:Class="Json_Reader_Universal.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:Json_Reader_Universal"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d" xmlns:telerik="using:Telerik.UI.Xaml.Controls.Primitives" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Button Content="DOWNLOAD TABLE" Click="DownloadButton_Click" HorizontalAlignment="Left" />
+		<telerik:RadDataBoundListBox x:Name="listBox" Grid.Row="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+			<telerik:RadDataBoundListBox.ItemTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="5*" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="*" />
+							<ColumnDefinition Width="*" />
+						</Grid.ColumnDefinitions>
+						<TextBlock Text="{Binding Position}" Grid.Column="0" />
+						<TextBlock Text="{Binding Name}" Grid.Column="1" />
+						<TextBlock Text="{Binding Wins}" Grid.Column="2" />
+						<TextBlock Text="{Binding Draws}" Grid.Column="3" />
+						<TextBlock Text="{Binding Losses}" Grid.Column="4" />
+						<TextBlock Text="{Binding Points}" Grid.Column="5" />
+					</Grid>
+				</DataTemplate>
+			</telerik:RadDataBoundListBox.ItemTemplate>
+		</telerik:RadDataBoundListBox>
+	</Grid>
+</Page>
