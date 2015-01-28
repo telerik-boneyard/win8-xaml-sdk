@@ -1,6 +1,6 @@
 In this post I will show you how to arrange the HubTile for Universal Windows apps in a honeycomb pattern and achieve a result similar to the one below:
 
-![](honeycomb-0-resized.png)
+![](images/honeycomb-0-resized.png)
 
 A task like this involves two steps.
 
@@ -15,11 +15,10 @@ The default shape of RadHubTile is a square.
 <telerikPrimitives:RadHubTile ImageSource="Assets/Image/contacts-4.jpg" />
 ```
 
-![](honeycomb-profile-image.png)
+![](images/honeycomb-profile-image.png)
  
 To make it a hexagon, we need to edit the default ControlTemplate of RadHubTile. If you examine the stripped down version of the ControlTemplate below, you'll notice that all the magic happens in the Path object. The Data attribute of the Path object gives the hub tile a hexagonal shape and the Fill attribute, in conjunction with a converter, takes care of rendering the content of the hub tile.
 
-https://gist.github.com/kiril-stanoev/dd7a55d19cd5847d602a
 ```
 <Style TargetType="telerikPrimitives:RadHubTile">
 	<Setter Property="Template">
@@ -45,7 +44,6 @@ https://gist.github.com/kiril-stanoev/dd7a55d19cd5847d602a
 </Style>
 ```
 
-https://gist.github.com/kiril-stanoev/67dcd8db11f265de1457
 ```
 public class ImageBrushConverter : IValueConverter
 {
@@ -60,7 +58,7 @@ public class ImageBrushConverter : IValueConverter
 }
 ```
 
-![](honeycomb-profile-image-hexagon.png)
+![](images/honeycomb-profile-image-hexagon.png)
 
 If you want to digg deeper into the custom ControlTemplate of RadHubTile, examine the Resources.xaml file in the  HoneyComb_HubTile.Shared project.
 
@@ -73,7 +71,6 @@ ItemLength
 
 This dependency property is used in the MeasureOverride method and sets the width and height of each hub tile.
 
-https://gist.github.com/kiril-stanoev/e29fc84e80a2c99a74cf
 ```
 private static readonly double COS_30_DEGREE = 0.866;
 protected override Size MeasureOverride(Size availableSize)
@@ -92,7 +89,6 @@ protected override Size MeasureOverride(Size availableSize)
 Row and Column 
 These two are attached properties and work the same way as Grid.Row and Grid.Column do. They are used in the Arrange pass of the panel.
 
-https://gist.github.com/kiril-stanoev/0a9c616021e11412bd89
 ```
 protected override Size ArrangeOverride(Size finalSize)
 {
@@ -116,7 +112,6 @@ protected override Size ArrangeOverride(Size finalSize)
 
 The HoneycombPanel accepts a set of hub tiles. These tiles can be arranged by using the attached HoneycombPanel.Row and HoneycombPanel.Column properties.
 
-https://gist.github.com/kiril-stanoev/5982d60fe557be5d3af7
 ```
 <panel:HoneycombPanel ItemLenght="122">
 	<telerikPrimitives:RadHubTile panel:HoneycombPanel.Row="0" panel:HoneycombPanel.Column="0" ImageSource="Assets/Image/contacts-4.jpg" />
@@ -142,8 +137,8 @@ https://gist.github.com/kiril-stanoev/5982d60fe557be5d3af7
 </panel:HoneycombPanel>
 ```
 
-![](honeycomb-panel-hexagonal-hub-tiles.png)
+![](images/honeycomb-panel-hexagonal-hub-tiles.png)
 
 To run the project you'd have to reference Telerik.Core.dll and Telerik.UI.Xaml.Primitives.dll which are part of [UI for Windows Universal](http://www.telerik.com/windows-universal-ui "UI for Windows Universal").
 
-[![](ui-for-windows-universal-banner.png)](http://www.telerik.com/download/windows-universal-ui)
+[![](images/ui-for-windows-universal-banner.png)](http://www.telerik.com/download/windows-universal-ui)
