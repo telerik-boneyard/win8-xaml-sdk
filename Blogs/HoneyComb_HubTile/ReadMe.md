@@ -9,7 +9,7 @@ A task like this involves two steps.
 1. Change the shape of the hub tile from square to hexagon.
 2. Create a panel that will arrange the hexagons in a honeycomb layout.
 
-# Hexagonal Hub Tiles
+## Hexagonal Hub Tiles
 
 The default shape of RadHubTile is a square.
 
@@ -64,7 +64,7 @@ public class ImageBrushConverter : IValueConverter
 
 If you want to digg deeper into the custom ControlTemplate of RadHubTile, examine the Resources.xaml file in the  HoneyComb_HubTile.Shared project.
 
-# Honeycomb Layout Panel
+## Honeycomb Layout Panel
 
 Creating a panel that arranges the hexagon tiles in a honeycomb pattern turned out to be easier than I thought. 
 The panel has 3 properties. 
@@ -110,7 +110,7 @@ protected override Size ArrangeOverride(Size finalSize)
 }
 ```
 
-# Using the Honeycomb Panel
+## Using the Honeycomb Panel
 
 The HoneycombPanel accepts a set of hub tiles. These tiles can be arranged by using the attached HoneycombPanel.Row and HoneycombPanel.Column properties.
 
