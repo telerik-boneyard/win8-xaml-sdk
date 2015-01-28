@@ -69,7 +69,7 @@ If you want to digg deeper into the custom ControlTemplate of RadHubTile, examin
 Creating a panel that arranges the hexagon tiles in a honeycomb pattern turned out to be easier than I thought. 
 The panel has 3 properties. 
 
-ItemLength
+**ItemLength**
 
 This dependency property is used in the MeasureOverride method and sets the width and height of each hub tile.
 
@@ -88,7 +88,8 @@ protected override Size MeasureOverride(Size availableSize)
 }
 ```  
 
-Row and Column 
+**Row and Column**
+
 These two are attached properties and work the same way as Grid.Row and Grid.Column do. They are used in the Arrange pass of the panel.
 
 ```
