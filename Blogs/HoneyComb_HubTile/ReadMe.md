@@ -1,3 +1,5 @@
+# Honeycomb Layout Using Hub Tiles
+
 In this post I will show you how to arrange the HubTile for Universal Windows apps in a honeycomb pattern and achieve a result similar to the one below:
 
 ![](images/honeycomb-0-resized.png)
