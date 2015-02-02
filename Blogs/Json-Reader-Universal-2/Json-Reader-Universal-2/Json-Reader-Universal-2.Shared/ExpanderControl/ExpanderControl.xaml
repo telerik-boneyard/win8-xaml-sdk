@@ -1,0 +1,70 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="using:JsonReader">
+	<local:BooleanToVisibilityConverter x:Key="converter" />
+	<Style x:Key="ExpanderButtonStyle" TargetType="ToggleButton">
+		<Setter Property="MinWidth" Value="0" />
+		<Setter Property="VerticalAlignment" Value="Stretch" />
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="VerticalContentAlignment" Value="Stretch" />
+		<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+		<Setter Property="Foreground" Value="White" />
+		<Setter Property="FontWeight" Value="Normal" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ToggleButton">
+					<Grid x:Name="RootGrid">
+						<Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="{TemplateBinding BorderThickness}">
+							<ContentControl VerticalAlignment="{TemplateBinding VerticalAlignment}"
+									VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+									HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+									HorizontalAlignment="{TemplateBinding HorizontalAlignment}" ContentTemplate="{TemplateBinding ContentTemplate}"
+									Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"
+									FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}"
+									FontStyle="{TemplateBinding FontStyle}" Margin="{TemplateBinding Padding}" />
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="local:ExpanderControl">
+		<Setter Property="Foreground" Value="{StaticResource ButtonForegroundThemeBrush}" />
+		<Setter Property="BorderBrush" Value="{StaticResource ButtonBorderThemeBrush}" />
+		<Setter Property="Background" Value="{StaticResource ButtonBackgroundThemeBrush}" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="local:ExpanderControl">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<ToggleButton x:Name="PART_expanderButton" Foreground="{TemplateBinding Foreground}"
+								Style="{StaticResource ExpanderButtonStyle}" Background="{TemplateBinding Background}"
+								BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+								IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsExpanded , Mode=TwoWay}">
+							<ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									ContentTemplate="{TemplateBinding HeaderContentTemplate}" Content="{TemplateBinding Header}"
+									Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}"
+									FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"
+									Margin="{TemplateBinding Padding}" />
+						</ToggleButton>
+						<Border Grid.Row="1" x:Name="PART_ExpandableContent" Background="{TemplateBinding Background}"
+								BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+								Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsExpanded , Converter={StaticResource converter}}">
+							<Border.RenderTransform>
+								<TranslateTransform X="0" Y="0" />
+							</Border.RenderTransform>
+							<ContentPresenter x:Name="PART_ExpandableContentPresenter" Content="{TemplateBinding Content}"
+									ContentTemplate="{TemplateBinding ContentTemplate}" />
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>
