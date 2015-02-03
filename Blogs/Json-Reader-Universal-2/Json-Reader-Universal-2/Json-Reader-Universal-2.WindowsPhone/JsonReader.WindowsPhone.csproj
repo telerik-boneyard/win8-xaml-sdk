@@ -110,10 +110,10 @@
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Core">
-      <HintPath>..\..\..\..\..\..\..\..\Work\Telerik_UI_for_WindowsUniversal_2014.3.1203.45_Dev_hotfix\Binaries\Windows Phone 8.1\Telerik.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\_binaries\Windows Phone 8.1\Telerik.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Primitives">
-      <HintPath>..\..\..\..\..\..\..\..\Work\Telerik_UI_for_WindowsUniversal_2014.3.1203.45_Dev_hotfix\Binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\_binaries\Windows Phone 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

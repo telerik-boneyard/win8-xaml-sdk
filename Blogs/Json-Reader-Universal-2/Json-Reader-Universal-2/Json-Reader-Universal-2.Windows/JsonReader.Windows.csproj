@@ -135,10 +135,10 @@
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Core">
-      <HintPath>..\..\..\..\..\..\..\..\Work\Telerik_UI_for_WindowsUniversal_2014.3.1203.45_Dev_hotfix\Binaries\Windows 8.1\Telerik.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\_binaries\Windows 8.1\Telerik.Core.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.UI.Xaml.Primitives">
-      <HintPath>..\..\..\..\..\..\..\..\Work\Telerik_UI_for_WindowsUniversal_2014.3.1203.45_Dev_hotfix\Binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

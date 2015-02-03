@@ -36,8 +36,6 @@ namespace JsonReader.ViewModel
 			q.Description = "All matches since 1888";
 			q.Url = QueryStrings.selectAll;
 			this.Queries.Add(q);
-
-			this.selectedQuery = this.Queries[0];
 		}
 		public Query SelectedQuery
 		{

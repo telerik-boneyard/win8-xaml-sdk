@@ -1,0 +1,1 @@
+C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.WindowsPhone\JsonReader.WindowsPhone.csproj;neutral

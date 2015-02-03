@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>KSTANOEV</Machine>
+    <WindowsUser>kstanoev</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>36bcf9b4-81ce-4621-871d-72e90ea2fc1e</PackageIdentityName>
+    <IntermediateOutputPath>C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>DD1352255C0DB50F8214DB21A94835BEEEF372BF8F50277AE984E5661E547362</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>36bcf9b4-81ce-4621-871d-72e90ea2fc1e_1.0.0.0_neutral__6qe67yh5ej1y0</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>36bcf9b4-81ce-4621-871d-72e90ea2fc1e_6qe67yh5ej1y0!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>36bcf9b4-81ce-4621-871d-72e90ea2fc1e</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Rogue</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-02-03T09:28:08.649</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\JsonReader.Windows.exe">
+      <PackagePath>JsonReader.Windows.exe</PackagePath>
+      <Modified>2015-02-03T09:40:44.285</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2015-02-03T07:46:22.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+      <Modified>2014-12-03T13:58:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+      <Modified>2014-12-03T13:59:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-02-03T07:46:22.128</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-02-03T07:46:22.129</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-02-03T07:46:22.130</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-02-03T07:46:22.130</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-02-03T09:28:07.903</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\ExpanderControl\ExpanderControl.xbf">
+      <PackagePath>ExpanderControl\ExpanderControl.xbf</PackagePath>
+      <Modified>2015-02-03T09:38:50.079</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-02-03T09:40:44.060</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\JsonReader.Windows.xr.xml">
+      <PackagePath>JsonReader.Windows.xr.xml</PackagePath>
+      <Modified>2015-02-03T09:40:44.025</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Telerik.UI.Xaml.Primitives.xr.xml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Telerik.UI.Xaml.Primitives.xr.xml</PackagePath>
+      <Modified>2014-12-03T13:52:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTilePalette.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Listbox.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Listbox.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Listbox.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Listbox.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Resources.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Resources.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\Resources.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Resources.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml</PackagePath>
+      <Modified>2014-12-03T13:51:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\_binaries\Windows 8.1\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-12-03T13:59:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Work\GitHub\win8-xaml-sdk\Blogs\Json-Reader-Universal-2\Json-Reader-Universal-2\Json-Reader-Universal-2.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-02-03T09:28:08.355</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

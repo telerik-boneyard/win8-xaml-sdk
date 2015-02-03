@@ -25,14 +25,18 @@ namespace JsonReader
 		{
 			this.InitializeComponent();
 			this.queriesListBox.DataContext = this.queriesVM;
-			queriesExpander.DataContext = this.queriesVM;
+			this.queriesExpander.DataContext = this.queriesVM;
 			this.matchesListBox.ItemsSource = this.matches;
 		}
 
 		async private void queriesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
+			this.queriesExpander.Header = this.queriesVM.SelectedQuery.Description;
 			this.queriesExpander.IsExpanded = false;
 			this.queriesExpander.IsEnabled = false;
+
+			this.loadingProgress.IsIndeterminate = true;
+			this.loadingProgress.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
 			this.matches.Clear();
 			var jsonObject = await DownloadWebpageTask.GetJson(queriesVM.SelectedQuery.Url);
@@ -50,6 +54,8 @@ namespace JsonReader
 			}
 
 			this.queriesExpander.IsEnabled = true;
+			this.loadingProgress.IsIndeterminate = false;
+			this.loadingProgress.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 		}
 	}
 }
