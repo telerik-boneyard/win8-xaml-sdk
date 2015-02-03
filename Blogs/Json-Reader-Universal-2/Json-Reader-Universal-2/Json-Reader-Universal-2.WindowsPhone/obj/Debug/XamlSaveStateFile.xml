@@ -1,8 +1,0 @@
-<XamlCompilerSaveState>
-  <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\work\github\win8-xaml-sdk\blogs\json-reader-universal-2\json-reader-universal-2\json-reader-universal-2.windowsphone\obj\debug\intermediatexaml\jsonreader.windowsphone.exe" HashGuid="311693ea-3f5c-859f-2b17-5302caf56b5d" />
-    <ReferenceAssembly PathName="c:\work\github\win8-xaml-sdk\blogs\json-reader-universal-2\packages\newtonsoft.json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="225745d8-3693-ad6f-ebd5-8845d81f8e0f" />
-    <ReferenceAssembly PathName="c:\work\_binaries\windows phone 8.1\telerik.core.dll" HashGuid="858d26d8-4265-b23a-35f0-d39705fc954d" />
-    <ReferenceAssembly PathName="c:\work\_binaries\windows phone 8.1\telerik.ui.xaml.primitives.dll" HashGuid="7b9184dc-fb61-3d46-7cb3-485bcf0e4900" />
-  </ReferenceAssemblyList>
-</XamlCompilerSaveState>
